@@ -1,0 +1,84 @@
+---
+title: "Initial Graph-by-Graph classification"
+author: "Susan Vanderplas"
+date: "9/30/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F, fig.path = "figure")
+```
+
+```{r data-setup, include = F}
+# Download NYT covid data to create graphs which have a consistent look (removing outlet style from the equation)
+
+# Read in the data from NYT
+library(tidyverse)
+library(lubridate)
+library(zoo)
+library(ggrepel)
+library(gridExtra)
+cvstate <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv")
+
+cvstate <- cvstate %>%
+  group_by(state, fips) %>%
+  mutate(date_100th_case = min(date[cases >= 100]),
+         days_100th_case = date - date_100th_case,
+         daily_cases = cases - lag(cases, 1, default = 0),
+         week_avg_cases = rollmean(cases, 7, align = "right", fill = c(0, NA, NA), na.pad = T, na.rm = T),
+         daily_avg_cases = rollmean(daily_cases, 7, align = "right", fill = c(0, NA, NA), na.pad = T, na.rm = T),
+         daily_deaths = deaths - lag(deaths, 1, default = 0),
+         week_avg_deaths = rollmean(deaths, 7, align = "right", fill = c(0, NA, NA), na.pad = T, na.rm = T),
+         daily_avg_deaths = rollmean(daily_deaths, 7, align = "right", fill = c(0, NA, NA), na.pad = T, na.rm = T)) %>%
+  ungroup() %>%
+  mutate(state = factor(state))
+
+download.file("https://www2.census.gov/programs-surveys/popest/tables/2010-2019/state/totals/nst-est2019-01.xlsx", destfile = "census_pop_state.xlsx", quiet = T, mode = "wb")
+pop_data <- readxl::read_xlsx("census_pop_state.xlsx", col_names = c("state", "pop2019"), col_types = c("text", rep("skip", 11), "numeric"), skip = 9) %>%
+  mutate(state = str_remove(state, "[[:punct:]]"))
+
+cvstate <- left_join(cvstate, pop_data, by = "state")
+
+my_theme <- theme_bw() + 
+  theme(plot.background = element_rect(fill = "transparent", color = NA), 
+        panel.background = element_rect(fill = "transparent", color = NA), 
+        legend.background = element_rect(fill = "transparent", color = NA),
+        axis.text.y = element_text(angle = 90, hjust = 0.5)) 
+theme_set(my_theme)
+
+```
+
+# Maps
+
+
+
+
+# Time Series
+
+## Case Counts
+
+
+```{r}
+show_states <- c("California", "Texas", "New York", "Arizona", "Iowa", "Washington")
+tmp <- cvstate %>%
+  filter(state %in% show_states) %>%
+  filter(date <= ymd("2020-03-15"))
+
+tmpsum <- tmp %>% group_by(state) %>% 
+  filter(daily_avg_cases == max(daily_avg_cases)) %>%
+  filter(date == min(date))
+
+ggplot() + 
+  geom_line(data = tmp, 
+            aes(x = date, y = daily_avg_cases, color = state)) + 
+  geom_text_repel(data = tmpsum, 
+                  aes(x = date, y = daily_avg_cases, 
+                      label = state, color = state), 
+                  hjust = 0, nudge_x = 1) + 
+  scale_color_manual(values = color_palette) + 
+  guides(color = F) + 
+  scale_x_date(expand = expansion(mult = c(.05, .2)), 
+               date_breaks = "month", date_labels = "%B") + 
+  scale_y_continuous("Daily cases (7 day rolling average)") + 
+  my_theme + theme(axis.title.x = element_blank())
+```

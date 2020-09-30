@@ -1,6 +1,8 @@
 # Outline
 
-- temporal factors - what worked and didn't changed over time
-    - might be able to use wayback machine to recover timeline of some e.g. NYT graphics
+- classify charts based on the numbers, measures, criteria used (and changes in these measures over time)
+    - goal of each visualization
+    - form used
+    - what worked/didn't work
+    - whether the visualization as a whole is effective
     
-- types of graphs that were effective
