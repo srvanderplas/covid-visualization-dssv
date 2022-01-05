@@ -153,7 +153,7 @@ Another illustrative example is a simulation from ZEIT Online\footnote{\url{http
 % https://twitter.com/AndToddsaid/status/1314231055096971265 is a horrible set of graphs and a great example of the snark associated with covid management policy and geographic comparisons... 
 
 \section{To log or not to log}
-
+As COVID cases grow quasi-exponentially while there are susceptible members of the population^[subject to the effectiveness of mitigation measures and testing availability], it seems natural to use log scales to allow for more effective comparisons of slight changes in case counts over time. In addition, log scales make it possible to compare regions with different populations or infection rates in the same chart. As noted previously, however, interpreting log scales requires levels of numerical sophistication that may not be appropriate for the general public. Even researchers do not always read and interpret log scales correctly\citep{mengeLogarithmicScalesEcological2018}; expecting the general public to do so with emotionally charged content is difficult.
 % Discussion of how this section's conclusions change with the pandemic
 
 % Focus primarily on time-series graphs (as opposed to log scales in color)
