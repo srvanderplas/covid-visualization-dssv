@@ -277,6 +277,12 @@ ggplot(data = tmp2, aes(x = date, ymin = 0, ymax = y,
 As COVID cases grow quasi-exponentially while there are susceptible members of the population^[subject to the effectiveness of mitigation measures and testing availability], it seems natural to use log scales to allow for more effective comparisons of slight changes in case counts over time. In addition, log scales make it possible to compare regions with different populations or infection rates in the same chart. As noted previously, however, interpreting log scales requires levels of numerical sophistication that may not be appropriate for the general public. Even researchers do not always read and interpret log scales correctly\citep{mengeLogarithmicScalesEcological2018}; expecting the general public to do so with emotionally charged content is difficult.
 % Discussion of how this section's conclusions change with the pandemic
 
+One issue with assessing the use of log scales is that their effectiveness changes with the stage of the pandemic and the amount (and varieties) of data shown. Initially, log scales were incredibly useful at showing case counts, because minimal mitigation measures were in place and the growth of case counts (or presumptive positive cases, in absence of available testing) was fairly close to exponential. In addition, the use of log scales allowed for the comparison of nominal cases across entities with large population differences: in the US, we could compare cases in New York and California with cases in Michigan and Washington, even though the population of Michigan and Washington are much lower than the population of either New York or California. 
+
+However, after the first wave of COVID, the issues with log scales became more apparent; \Cref{fig:log-scale-failures} demonstrates the problem. With a baseline number of cases that occur either because charts show a cumulative case count or because there is some baseline spread level that is not exponential because of mitigation measures ($R_{eff} \leq 1$), a log scale makes it difficult to detect slight increases in case counts that might indicate a new source of uncontrolled spread. 
+
+\Cref{fig:log-scale-failures} shows
+
 % Focus primarily on time-series graphs (as opposed to log scales in color)
 
 % Problems with log scales
