@@ -409,7 +409,7 @@ ggplot(aes(x = x, y = value, color = name, size = name)) +
 % Problems with linear scales
 While log scales have their problems, linear scales are not immune from issues either. It can be very difficult to adequately compare to past situations when looking at the full time series of case counts. For example, in \Cref{fig:linear-scales-ref-lines}, it is difficult to tell whether the first wave of COVID cases in March 2020 had an increase as fast as that in January of 2021; it is even more difficult to compare the order-of-magnitude of change in case rate growth of January 2021 relative to January 2022 when the more contagious omicron variant became prevalent. 
 
-<<linear-scales-ref-lines, fig.width = 8, fig.height = 4, out.width = ".8\\linewidth", fig.cap = "Reported COVID cases in New York State, 2020-2022. The linear scale makes it difficult to compare the trajectory of different waves to determine how severe the current status is relative to the past, because the primary contrast is the height of the relative peaks, rather than the growth \\emph{rate}. A similar graph on the log scale would have the peaks at much more similar heights (though there would still be a difference), allowing the reader to focus on other information.">>=
+<<linear-scales-ref-lines, fig.width = 8, fig.height = 4, out.width = ".8\\linewidth", fig.cap = "Reported COVID cases in New York State, 2020-2022. The linear scale makes it difficult to compare the trajectory of different waves to determine how severe the current status is relative to the past, because the primary contrast is the height of the relative peaks, rather than the growth \\emph{rate}. A similar graph on the log scale would have the peaks at much more similar heights (though there would still be a difference), allowing the reader to focus on other information, such as the slope of the relative lines.">>=
 cvstate %>%
   filter(state == "New York") %>%
   ggplot(aes(x = date, y = daily_avg_cases)) + 
@@ -420,22 +420,13 @@ cvstate %>%
 @
 
 
-<<log-scales-ref-lines, fig.width = 8, fig.height = 4, out.width = ".8\\linewidth", fig.cap = "Reported COVID cases in New York State, 2020-2022. The linear scale makes it difficult to compare the trajectory of different waves to determine how severe the current status is relative to the past.">>=
-cvstate %>%
-  filter(state == "New York") %>%
-  ggplot(aes(x = date, y = daily_avg_cases)) + 
-  geom_line() + 
-  ggtitle("Reported COVID cases in New York State, 2020-2022") +
-  ylab("Daily Cases reported (7-day average)") + 
-  xlab("Date") + theme_bw() + 
-  scale_y_log10()
-@
-
-
-
 % Discussion of sites which allow the user to switch back and forth between scales
 
-It is not clear that the use of log or linear scales during the COVID-19 pandemic had a large effect on public opinion. Several studies were conducted in the early stages of the pandemic \citep{romanoScaleCOVID19Graphs2020, seviLogarithmicLinearVisualizations2020, ryanGraphsLogarithmicAxes2020} and results seem to suggest that while individuals have difficulty understanding log scale graphs, these issues do not tend to affect their support for intervention measures (perhaps in part because COVID-related news saturated the news and opinions were set outside of information provided in the experiments). 
+It is not clear that the use of log or linear scales during the COVID-19 pandemic had a large effect on public opinion. Several studies were conducted in the early stages of the pandemic \citep{romanoScaleCOVID19Graphs2020, seviLogarithmicLinearVisualizations2020, ryanGraphsLogarithmicAxes2020} and results seem to suggest that while individuals have difficulty understanding log scale graphs, these issues do not tend to affect their support for intervention measures, perhaps in part because COVID-related news saturated the news and opinions were set outside of information provided in the experiments. This saturation makes it difficult to study the graphical influences while removing effects of popular opinion, political leaning, and emotional sentiment relating to the pandemic. 
+
+If we evaluate the use of log and linear scales under the more general context of exponential (or near-exponential) growth rates, however, we can gain some clarity as to their use in this particular context. We are abysmal at forecasting exponential growth, vastly under-estimating future growth by using linear or quadratic approximations \citep{wagenaarExtrapolationExponentialTime1978a,lawrenceExploringJudgementalForecasting1992,timmersInverseStatisticsMisperception1977a}. If the goal of a chart of COVID case counts is to allow individuals to forecast the trend and make decisions accordingly, then using a log scale (with all of its pitfalls in understanding) may be the best option, as it at least replaces the need to forecast along an exponential curve with the need to forecast along a straight line. However, it is not clear that individuals can transfer that prediction back to a linear scale. If the goal of presenting a chart of case counts is to tell the story of what has happened (rather than supporting future decision-making), then it is undoubtedly better to present the data on a more familiar linear scale that requires less cognitive load on the part of the viewer. 
+
+Unfortunately, there are not a lot of good options for supporting forecasting decisions in mathematically novice viewers. Guide lines, like those used in the Financial Times, were helpful in the initial phases of the pandemic, but no outlets that we are aware of shifted the lines to show the growth rate of the current peak (as opposed to the initial peak), and due to the issues shown in \Cref{fig:log-scale-failures}, these guide lines may not have been all that successful in any case. Those hoping to create successful time-series charts that allow forecasting are thus left with two options: deal with our inability to forecast exponential growth, or deal with most individuals' inability to translate log scales into practical reality. 
 
 
 \section{Summary and discussion} \label{sec:summary}
