@@ -191,16 +191,31 @@ While human thinking tends to simplify patterns and political communication also
 
 On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (COVID-19) a pandemic, and since that date at the latest, the global perspective of the disease has been in the public eye. The spatial spread of the virus and the resulting cases and deaths are commonly visualized by choropleth maps, see for example Figure~\ref{fig:choro1} showing the total number of infections reported in each country as of January 14, 2022. For the pandemic perspective a central element of the narrative is the ubiquity of the disease and the accompanying global impact. Choropleth maps based on raw numbers of cases might look convincing and fit to the purpose, but neglect a number of well-know caveats for statistical reporting and visualisation:
 \begin{enumerate}
-\item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Especially in the case of similarly coloured areas of the regions, viewers tend to integrate them unconsciously and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of Covid-19 cases are strongly influenced by the population size of the country, number of tests performed, and the accuracy of the recording and reporting system. \Cref{fig:scaled-choro} shows case load scaled by population, but is still subject to data quality and comparability issues related to testing and case reporting; these biases are hidden as the chart presents all data as equivalent and comparable when in fact it is likely that direct comparisons may be unwise in many cases.
-\item The area-bias: The visual impression is determined more by the colour and the geographical area of the individual countries than by the number of Covid cases. Since the countries of the world differ extremely in area, the visual assessment is distorted, especially in the case of neighbouring countries with similar numbers but different areas. Cartograms, like that shown in \Cref{fig:hex-cartogram}, can mitigate the area bias by sacrificing the viewer's ease of geographic recognition.  
-\item colour-scheme obstructions: Much research in visualisation is concerned with the appropriate choice of colour schemes, see \citep{brewer1997}. The choice of a continuous scale or a categorical scale, the choice of a scale that promotes the recognition of patterns or a scale that supports the filtering out of specific map details, influences the quality of choropleth maps. 
+\item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Especially in the case of similarly coloured areas of the regions, viewers tend to integrate them unconsciously and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of Covid-19 cases are strongly influenced by the population size of the country, but also by the number of tests performed and the accuracy of the recording and reporting system.
+\item The area-bias: The visual impression is determined more by the colour and the geographical area of the individual countries than by the number of Covid cases. Since the countries of the world differ extremely in area, the visual assessment is distorted, especially in the case of neighbouring countries with similar numbers but different areas.
+\item Color-scheme obstructions: Much research in visualisation is concerned with the appropriate choice of colour schemes, see \citep{brewer1997}. The choice of a continuous scale or a categorical scale, the choice of a scale that promotes the recognition of patterns or a scale that supports the filtering out of specific map details, influences the quality of choropleth maps.  
 \end{enumerate}
 
 \begin{figure*}
-	\includegraphics[width = 0.98\textwidth]{who_totalcases_choro}
+	\includegraphics[width = 0.98\textwidth]{Figures_Web/who_totalcases_choro.png}
 	\caption{Choropleth map of the Covid-19 cases world-wide by country. Source: WHO \url{https://covid19.who.int}}
 	\label{fig:choro1}
 \end{figure*}
+
+Choropleth maps are quite commonly used by media companies and governmental organisations and it is easy to find good and bad examples of their usage.
+
+Proportional symbol maps, see Fig.~\ref{fig:propsymb} or graduated symbol maps place scaled symbols or diagrams directly on the input map, often on the centroid of the regions. The symbol, most commonly a disk or a square, is scaled such that its area corresponds to the data value of the region.
+
+
+\begin{figure*}
+	\includegraphics[width = 0.98\textwidth]{Figures_Web/wp_totaldeaths_propsymb.png}
+	\caption{Proportional symbol map showing the cumulated reported Covid-19 related deaths adjusted for population world-wide by country. Source: Washington Post \url{https://www.washingtonpost.com/graphics/2020/world/mapping-spread-new-coronavirus/}}
+	\label{fig:propsymb}
+\end{figure*}
+
+And clearly, the visual impression of any map based illustration depends on the projection chosen for the underlying map as the examples quite often exercies a western-centric viewpoint.
+
+The narrative of the global perspective seems to be highly limited to the aspect of a pandemic affecting the entire globe. None of the above viusalisations intends to provide a deeper insight into the spatial distribution of the phenomenon, neither within the administratively motivated spatial borders nor across them. The use of maps in this context more often focusses on the comparative aspects: how are we doing as opposed to our neighbors, which startegy to fight Covid-19 is better? Topics that we will look closer into in Section~\ref{sec:rankings}
 
 \begin{figure}
 \centering
@@ -301,6 +316,9 @@ While traditionally, time-series information has been limited to charts with tim
 % Other animations?
 
 \section[]{Comparisons and rankings}
+\label{sec:rankings}
+
+The plague is always the others: This is the short formula for dealing with infectious diseases from a historical perspective \citep{thiessen2021}. Sociologists have coined the term "othering" for such attributions of the others \citep{mountz2009}. This refers to the observation that above all new, unknown threats are projected onto "strangers" and "the others". Closing the borders and restricting access to the country became a popular means of controlling the spread of the disease. Unsurprisingly, the prevailing visual narrative focused on comparisons often fuelled by political rivalry, historical dependencies, recent withdrawal from supranational institutions or regional competitions. An ongoing debate about the true extent of the dangers of covid-19 and how best to combat it, combined with daily availability and public access to data at all types of adminsitratory levels, fostered ongoing competition and the derivation of leaderboards. 
 % https://twitter.com/AndToddsaid/status/1314231055096971265 is a horrible set of graphs and a great example of the snark associated with covid management policy and geographic comparisons... 
 
 \section{To log or not to log}
