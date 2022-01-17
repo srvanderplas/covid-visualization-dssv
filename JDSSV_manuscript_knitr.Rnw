@@ -13,6 +13,8 @@
 
 \usepackage{cleveref}
 
+\usepackage{subcaption}
+
 %% new custom commands
 \newcommand{\class}[1]{`\code{#1}'}
 \newcommand{\fct}[1]{\code{#1()}}
@@ -195,20 +197,23 @@ On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (CO
 \end{enumerate}
 
 \begin{figure*}
-	\includegraphics[width = 0.98\textwidth]{who_totalcases_choro.png}
+	\includegraphics[width = 0.98\textwidth]{who_totalcases_choro}
 	\caption{Choropleth map of the Covid-19 cases world-wide by country. Source: WHO \url{https://covid19.who.int}}
 	\label{fig:choro1}
 \end{figure*}
 
 \begin{figure}
-\includegraphics[width=.99\linewidth]{covid-tracking-hex-cartogram}
+\centering
+\begin{subfigure}[t]{.45\textwidth}
+\includegraphics[width=\textwidth]{covid-tracking-hex-cartogram}
 \caption{Hexagonal Cartogram of Covid-19 cases in the United States by state, per million people. This somewhat mitigates the area bias issue, but is still subject to other perceptual biases. Source: The COVID Tracking Project at The Atlantic \url{https://covidtracking.com/data/charts/us-daily-positive-cases}.}\label{fig:hex-cartogram}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{.45\textwidth}
+\includegraphics[width=\textwidth]{nyt-covid-scaled-choro}
+\caption{Choropleth Map of covid cases per country, scaled by population. Source: New York Times \url{https://www.nytimes.com/interactive/2021/world/covid-cases.html}.}\label{fig:scaled-choro}
+\end{subfigure}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=.99\linewidth]{nyt-covid-scaled-choro}
-\caption{Choropleth Map of covid cases per country, scaled by population. Source: New York Times \url{https://www.nytimes.com/interactive/2021/world/covid-cases.html}.}\label{fig:scaled-choro}
-\end{figure}
 
 Throughout the pandemic, both in choropleth maps and time-series graphs, creators have had to grapple with scale. When scales automatically adjust, mental comparisons across time can become misleading, because e.g. the colour scale from yesterday does not mean the same thing as it did today, as the range has expanded and the colours have stayed the same. This problem is more noticeable in choropleths than in time-series charts, where we are more likely to expect and notice a scale change, but it is still a fundamental issue in many different types of charts. Some publications leaned into this by arranging their graphics to highlight the fact that cases were ``off the charts", as in \Cref{fig:jbm-tweet}, implicitly cuing readers that the situation was exceptional and worthy of their attention.
 
@@ -218,7 +223,7 @@ Throughout the pandemic, both in choropleth maps and time-series graphs, creator
 \label{fig:jbm-tweet}
 \end{figure}
 
-% Is it worth discussing e.g. https://www.nytimes.com/interactive/2021/us/covid-risk-map.html that does not make this distinction and runs into the "boy who cried wolf" problem? When everything is always extremely high risk we just tend to tune things out. I don't want to distract from the overview, though...
+% Is it worth discussing e.g. https://www.nytimes.com/interactive/2021/us/covid-risk-map.html that does not make this distinction and runs into the "boy who cried wolf" problem? When everything is always extremely high risk we just tend to tune things out. I don't want to distract from the overview, though... https://twitter.com/rypan/status/1282020934044401664 is a good example
 
 
 Simulations were used particularly illustratively in the media in the course of the pandemic. An inspiring example illustrating the spread of the epidemic appeared as early as 14 March 2020 in the Washington Post\footnote{\url{https://www.washingtonpost.com/graphics/2020/world/corona-simulator/}} with the title "Why outbreaks like coronavirus spread exponentially, and how to flatten the curve". The Washington Post made this simulation available free of charge and in all major languages, which led to it being distributed worldwide, including repeatedly on German television\footnote{\url{https://web.br.de/interaktiv/corona-simulation/}}. The New York Times\footnote{\url{https://www.nytimes.com/interactive/2020/us/coronavirus-spread.html}} published a dynamic graphic entitled "How the Virus Won", which maps the spread of COVID-19 cases from February to June 2020 in the USA. It shows how an analysis of the associations between different COVID-19 strains and travel patterns can help understand the spread of the disease.
@@ -229,7 +234,7 @@ Another illustrative example is a simulation from ZEIT Online\footnote{\url{http
 \section{Time series}
 % Line plots, frequency domain, NY times tile plots w/ cases represented in colour intensity
 
-Visualisations are typically created for a specific purpose, and during a pandemic it is particularly critical to show the evolution of the situation over time. This not only allows individuals to compare the present to past case counts, but also allows for forecasting and prediction of the future based on the current state. Time series plots are the most natural choice for these goals, and over the course of the pandemic, many different attempts have been made to show time series information using different graphical forms. 
+Visualisations are typically created for a specific purpose, and during a pandemic it is particularly critical to show the evolution of the situation over time, as there are new developments on a daily basis. Typically, this means that cases, hospitalizations, and/or deaths are plotted on the y-axis, with date shown on the x-axis. This not only allows individuals to compare the present to past case counts, but also allows for forecasting and prediction of the future based on the current state. Time series plots are the most natural choice for these goals, and over the course of the pandemic, many different attempts have been made to show time series information using different graphical forms. 
 
 \begin{figure}
 \centering
@@ -247,65 +252,29 @@ The most obvious time-series plot is also the most common: plotting cases agains
 \label{fig:wapo-context}
 \end{figure}
 
-<<freq-domain-plot, include = F, eval = F>>=
-show_states <- c("California", "Texas", "New York", "Arizona", "Iowa", "Washington")
+However, there are some limitations with this presentation: if we are interested in showing the change in counts over time, viewers must assess the slope of the line, rather than its position. We know that slope judgments are much less accurate than position \citep{clevelandGraphicalPerceptionVisual1987}, even in relatively simple situations; when we add in our ability to assess exponential growth, our perceptual accuracy is even more suspect.
 
-n <- 50000
-tmp <- cvstate %>%
-  filter(state %in% show_states) %>%
-  select(state, date, cases) %>%
-  mutate(mod_num = cases %% n,
-         whole_num = floor(cases/n)) %>%
-  group_by(state, whole_num) %>%
-  mutate(whole_num_days = n()) %>%
-  group_by(state) %>%
-  arrange(date) 
+Other time-series representations were more abstract, sacrificing exact data representations for a higher-level summary overview that allowed viewers to make comparisons between regions and points in time without the burden of numerical calculations. Several versions from the New York Times are shown in \Cref{fig:sparklines-heatmap-nyt}. The advantage of these displays is that they are very simple and allow for viewers to gain an intuitive understanding of the data, however, they do not present precise numerical information and even the color scale is fairly opaque -- it would be extremely difficult to translate the visualization into any sort of accurate numerical estimate. In addition, by hiding these details from the user, it is very difficult to identify when the representation changes over time, as it did several times during the summer of 2020. The use of a similar color scheme as well as similar representations made it extremely difficult for users to identify that the value represented had changed. Clearly, the purpose of these charts is not to provide numerical precision, but rather a comparative assessment of the status of one region relative to others as well as relative to previous time points. 
 
-tmp2 <- bind_rows(
-  # Day before first case detected:
-  filter(tmp, whole_num == 0) %>%
-    group_by(state) %>%
-    summarize(date = min(date) - lubridate::days(1), y = 0, whole_num = 0, 
-              whole_num_days = unique(whole_num_days), mod_num = 0) %>%
-    unique() %>%
-    ungroup(),
-  # Date before the count rolls over
-  tmp %>%
-    group_by(state, whole_num) %>%
-    filter(date == max(date)) %>%
-    group_by(state) %>%
-    mutate(y = ifelse(whole_num == max(whole_num), mod_num, n),
-           whole_num_days = ifelse(whole_num == max(whole_num), whole_num_days/(y/10000), whole_num_days)),
-  # Date after the count rolls over
-  tmp %>%
-    group_by(state, whole_num) %>%
-    filter(date == min(date)) %>%
-    mutate(y = 0, date = date - lubridate::days(1))
-  ) %>%
-  group_by(state, whole_num) %>%
-  mutate(whole_num_days = max(whole_num_days))
-  
 
-ggplot(data = tmp2, aes(x = date, ymin = 0, ymax = y, 
-                        colour = whole_num_days, 
-                        fill = whole_num_days, 
-                        group = whole_num)) + 
-  geom_ribbon() + 
-  facet_grid(state~.) + 
-  scale_x_date(date_breaks = "month", date_labels = "%B") +
-  scale_y_continuous(breaks = c(n/2, n), labels = paste0(c(n/2000, n/1000), "k"))  + 
-  scale_colour_gradientn(guide = 'none', paste0("Days to ", n/1000, "k\nmore cases"), space = "Lab", 
-    trans = "log10",
-    colours = darkblueseqpal
-    ) + 
-  scale_fill_gradientn(paste0("Days to ", n/1000, "k\nmore cases"), space = "Lab", 
-    trans = "log10",
-    colours = blueseqpal) + 
-  my_theme + 
-  theme(axis.title = element_blank(), 
-        legend.background = element_rect(fill = "transparent", colour = NA), 
-        legend.position = c(0, .66), legend.justification = c(0, 1), legend.direction = "horizontal")
-@
+\begin{figure}
+\centering
+\includegraphics[width=.3\linewidth]{NYT-heatmap-crop}
+\includegraphics[width=.3\linewidth]{NYT-heatmap-crop3}
+\includegraphics[width=.3\linewidth]{NYT-heatmap-crop2}
+\caption{Sparklines style heatmaps embedded in a table of coronavirus data by state. Over the course of Summer 2020, the specific measures shown changed, even though the form of the data remained highly similar. Source: \url{https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html} (May 6, 2020; June 15, 2020; and July 24, 2020, respectively) }
+
+\label{fig:sparklines-heatmap-nyt}
+\end{figure}
+
+One unique time-series plot created a representation of the case counts in the frequency domain: instead of plotting cases as they occurred, the chart instead shows line segments from 0 to N in $y$, where $N$ is a predefined number of cases; then the chart resets to show the next angle. This produces a sense of intensity of the waves of the pandemic over time as shown in \Cref{fig:freq-domain}. Interestingly, this frequency representation can also be easily transferred into an audio domain, providing access for visually impaired users as well as a multimodal representation of the data for sighted users. 
+
+\begin{figure}
+\centering
+\includegraphics[width=.75\linewidth]{frequency-domain}
+\caption{Frequency-domain case count graphics. Here, each 1000 deaths are represented by a single line segment whose slope represents the time taken to reach the next 1000 deaths. This provides viewers with a sense of the pace of the epidemic, rather than the raw case counts in more standard time-series representations. This representation can also be shown in the auditory domain, providing access to those who are typically excluded from visualizations due to vision loss. Source: Romain Vuillemot, \url{https://observablehq.com/@romsson/sonification-of-covid-19-data}.}
+\label{fig:freq-domain}
+\end{figure}
 
 \section[]{Comparisons and rankings}
 % https://twitter.com/AndToddsaid/status/1314231055096971265 is a horrible set of graphs and a great example of the snark associated with covid management policy and geographic comparisons... 
