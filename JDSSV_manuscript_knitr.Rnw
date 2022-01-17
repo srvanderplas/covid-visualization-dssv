@@ -122,26 +122,26 @@ pop_data <- readxl::read_xlsx("census_pop_state.xlsx", col_names = c("state", "p
 cvstate <- left_join(cvstate, pop_data, by = "state")
 
 my_theme <- theme_bw() + 
-  theme(plot.background = element_rect(fill = "transparent", color = NA), 
-        panel.background = element_rect(fill = "transparent", color = NA), 
-        legend.background = element_rect(fill = "transparent", color = NA),
+  theme(plot.background = element_rect(fill = "transparent", colour = NA), 
+        panel.background = element_rect(fill = "transparent", colour = NA), 
+        legend.background = element_rect(fill = "transparent", colour = NA),
         axis.text.y = element_text(angle = 90, hjust = 0.5)) 
 theme_set(my_theme)
 @
 
-<<colorpal, include = F>>=
+<<colourpal, include = F>>=
 # Including this for temporary compatibility - we may want to use *shudder* viridis?
-main_colors <- c("#d00000", "#f5f1e7", "#c7c8ca")
+main_colours <- c("#d00000", "#f5f1e7", "#c7c8ca")
 
 # use as accents
-secondary_colors <- c("#001226", "#249ab5")
+secondary_colours <- c("#001226", "#249ab5")
 
 # These are only to be used for infographics/charts
-tertiary_colors <- c("#bccb2a", "#f58a1f", "#005d84", "#ffd74f", "#a5228d")
+tertiary_colours <- c("#bccb2a", "#f58a1f", "#005d84", "#ffd74f", "#a5228d")
 
-color_palette <- c("#d00000", "#249ab5",  "#1B8500", "#f58a1f", "#a5228d", "#001226", "#B1EB66", "#005d84", "#c25700")
+colour_palette <- c("#d00000", "#249ab5",  "#1B8500", "#f58a1f", "#a5228d", "#001226", "#B1EB66", "#005d84", "#c25700")
 
-heat_color_palette <- c("#ffd74f", "#f58a1f", "#c25700", "#d00000", "#9D0000", "#6A0000")
+heat_colour_palette <- c("#ffd74f", "#f58a1f", "#c25700", "#d00000", "#9D0000", "#6A0000")
 
 blueseqpal <- c("001226", "06293E", "0C3F56", "12566E", "186D85", "1E839D", 
                 "249AB5", 
@@ -294,20 +294,20 @@ tmp <- cvstate %>%
 
 p1 <-  tmp %>%
   ggplot(aes(x = date, y = daily_avg_cases, group = state)) +
-  geom_textline(aes(color = state, label = state, vjust = -0.1, hjust =.93) , text_smoothing = 50) + 
+  geom_textline(aes(colour = state, label = state, vjust = -0.1, hjust =.93) , text_smoothing = 50) + 
   ylab("Daily average cases (7 day average)") + 
   xlab("Date") + 
-  guides(color = "none") + 
+  guides(colour = "none") + 
   scale_y_log10() + 
   facet_grid(~"Log") + 
   theme_bw()
 
 p2 <-  tmp %>%
   ggplot(aes(x = date, y = daily_avg_cases, group = state)) +
-  geom_textline(aes(color = state, label = state, vjust = -0.25, hjust = .85) , text_smoothing = 60) + 
+  geom_textline(aes(colour = state, label = state, vjust = -0.25, hjust = .85) , text_smoothing = 60) + 
   ylab("Daily average cases (7 day average)") + 
   xlab("Date") + 
-  guides(color = "none") + 
+  guides(colour = "none") + 
   facet_grid(~"Linear") + 
   theme_bw() +
   theme(axis.title.y = element_blank()) 
@@ -388,19 +388,26 @@ scales_y <- list(
 )
 
 tmp %>%
-ggplot(aes(x = x, y = value, color = name, size = name)) + 
+ggplot(aes(x = x, y = value, colour = name, size = name)) + 
   geom_line(alpha = .9) +
   facet_grid_sc(rows = vars(scale), cols = vars(Baseline), 
                 scales = list(x = "fixed", y = scales_y)) +
   scale_size_manual(values = c(1.75, 1, 1)) +
-  scale_color_manual(values = c("#249ab5", "#d00000", "#001226")) +
+  scale_colour_manual(values = c("#249ab5", "#d00000", "#001226")) +
   scale_fill_discrete(name = "") + 
   theme_bw() + 
   theme(legend.position = "bottom", axis.title = element_blank(),
         legend.title = element_blank())
 @
 
-% Focus primarily on time-series graphs (as opposed to log scales in color)
+% Focus primarily on time-series graphs (as opposed to log scales in colour)
+
+\begin{figure}
+\centering
+\includegraphics[width=.8\linewidth]{ft-reference-lines}
+\caption{An annotated time series from the Financial Times which appeared on Twitter on November 12, 2020. This chart has annotations which show the decreasing $R_{eff}$ in successive peaks of the pandemic, with periods of $R_{eff}<1$ between surges in cases. These annotations assist the reader with drawing complex conclusions from the chart, but are difficult to automate and thus tend to be manually curated. Source: Mark Gubrud (@mgubrud), \url{https://twitter.com/mgubrud/status/1326784082399944704}.}
+\label{fig:log-scale-ref-multiple}
+\end{figure}
 
 
 % Problems with linear scales
@@ -435,7 +442,7 @@ Unfortunately, there are not a lot of good options for supporting forecasting de
 
 If necessary or useful, information about certain computational details
 such as version numbers, operating systems, or compilers could be included
-in an unnumbered section. Also, auxiliary packages (say, for visualizations,
+in an unnumbered section. Also, auxiliary packages (say, for visualisations,
 maps, tables, \dots) that are not cited in the main text can be credited here.
 
 
