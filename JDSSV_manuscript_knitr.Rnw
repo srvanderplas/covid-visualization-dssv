@@ -294,7 +294,11 @@ While traditionally, time-series information has been limited to charts with tim
 \label{fig:nyt-spiral}
 \end{figure}
 
+% bar-chart race https://www.youtube.com/watch?v=8WH-bTH6GqI
 
+% BBC flowers w/ sonification https://www.bbc.co.uk/news/resources/idt-7464500a-6368-4029-aa41-ab94e0ee09fb
+
+% Other animations?
 
 \section[]{Comparisons and rankings}
 % https://twitter.com/AndToddsaid/status/1314231055096971265 is a horrible set of graphs and a great example of the snark associated with covid management policy and geographic comparisons... 
