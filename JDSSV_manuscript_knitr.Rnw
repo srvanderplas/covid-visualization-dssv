@@ -189,9 +189,9 @@ While human thinking tends to simplify patterns and political communication also
 
 On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (COVID-19) a pandemic, and since that date at the latest, the global perspective of the disease has been in the public eye. The spatial spread of the virus and the resulting cases and deaths are commonly visualized by choropleth maps, see for example Figure~\ref{fig:choro1} showing the total number of infections reported in each country as of January 14, 2022. For the pandemic perspective a central element of the narrative is the ubiquity of the disease and the accompanying global impact. Choropleth maps based on raw numbers of cases might look convincing and fit to the purpose, but neglect a number of well-know caveats for statistical reporting and visualisation:
 \begin{enumerate}
-\item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Especially in the case of similarly coloured areas of the regions, viewers tend to integrate them unconsciously and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of Covid-19 cases are strongly influenced by the population size of the country, but also by the number of tests performed and the accuracy of the recording and reporting system.
-\item The area-bias: The visual impression is determined more by the colour and the geographical area of the individual countries than by the number of Covid cases. Since the countries of the world differ extremely in area, the visual assessment is distorted, especially in the case of neighbouring countries with similar numbers but different areas.
-\item Color-scheme obstructions: Much research in visualisation is concerned with the appropriate choice of colour schemes, see \citep{brewer1997}. The choice of a continuous scale or a categorical scale, the choice of a scale that promotes the recognition of patterns or a scale that supports the filtering out of specific map details, influences the quality of choropleth maps.  
+\item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Especially in the case of similarly coloured areas of the regions, viewers tend to integrate them unconsciously and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of Covid-19 cases are strongly influenced by the population size of the country, number of tests performed, and the accuracy of the recording and reporting system. \Cref{fig:scaled-choro} shows case load scaled by population, but is still subject to data quality and comparability issues related to testing and case reporting; these biases are hidden as the chart presents all data as equivalent and comparable when in fact it is likely that direct comparisons may be unwise in many cases.
+\item The area-bias: The visual impression is determined more by the colour and the geographical area of the individual countries than by the number of Covid cases. Since the countries of the world differ extremely in area, the visual assessment is distorted, especially in the case of neighbouring countries with similar numbers but different areas. Cartograms, like that shown in \Cref{fig:hex-cartogram}, can mitigate the area bias by sacrificing the viewer's ease of geographic recognition.  
+\item colour-scheme obstructions: Much research in visualisation is concerned with the appropriate choice of colour schemes, see \citep{brewer1997}. The choice of a continuous scale or a categorical scale, the choice of a scale that promotes the recognition of patterns or a scale that supports the filtering out of specific map details, influences the quality of choropleth maps. 
 \end{enumerate}
 
 \begin{figure*}
@@ -200,6 +200,25 @@ On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (CO
 	\label{fig:choro1}
 \end{figure*}
 
+\begin{figure}
+\includegraphics[width=.99\linewidth]{covid-tracking-hex-cartogram}
+\caption{Hexagonal Cartogram of Covid-19 cases in the United States by state, per million people. This somewhat mitigates the area bias issue, but is still subject to other perceptual biases. Source: The COVID Tracking Project at The Atlantic \url{https://covidtracking.com/data/charts/us-daily-positive-cases}.}\label{fig:hex-cartogram}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=.99\linewidth]{nyt-covid-scaled-choro}
+\caption{Choropleth Map of covid cases per country, scaled by population. Source: New York Times \url{https://www.nytimes.com/interactive/2021/world/covid-cases.html}.}\label{fig:scaled-choro}
+\end{figure}
+
+Throughout the pandemic, both in choropleth maps and time-series graphs, creators have had to grapple with scale. When scales automatically adjust, mental comparisons across time can become misleading, because e.g. the colour scale from yesterday does not mean the same thing as it did today, as the range has expanded and the colours have stayed the same. This problem is more noticeable in choropleths than in time-series charts, where we are more likely to expect and notice a scale change, but it is still a fundamental issue in many different types of charts. Some publications leaned into this by arranging their graphics to highlight the fact that cases were ``off the charts", as in \Cref{fig:jbm-tweet}, implicitly cuing readers that the situation was exceptional and worthy of their attention.
+
+\begin{figure}
+\includegraphics[width=.99\linewidth]{ft-off-charts}
+\caption{Chart showing the increase in cases as a result of the B.1.617.2 variant in regions of the UK. Notably, this chart arranges areas to accommodate certain regions whose cases are ``off the chart" in order to emphasize the exceptional situation. Source: Tweet by John Burn-Murdoch (@jburnmurdoch), designer for the Financial Times. \url{https://twitter.com/jburnmurdoch/status/1397995388267810818}.}
+\label{fig:jbm-tweet}
+\end{figure}
+
+% Is it worth discussing e.g. https://www.nytimes.com/interactive/2021/us/covid-risk-map.html that does not make this distinction and runs into the "boy who cried wolf" problem? When everything is always extremely high risk we just tend to tune things out. I don't want to distract from the overview, though...
 
 
 Simulations were used particularly illustratively in the media in the course of the pandemic. An inspiring example illustrating the spread of the epidemic appeared as early as 14 March 2020 in the Washington Post\footnote{\url{https://www.washingtonpost.com/graphics/2020/world/corona-simulator/}} with the title "Why outbreaks like coronavirus spread exponentially, and how to flatten the curve". The Washington Post made this simulation available free of charge and in all major languages, which led to it being distributed worldwide, including repeatedly on German television\footnote{\url{https://web.br.de/interaktiv/corona-simulation/}}. The New York Times\footnote{\url{https://www.nytimes.com/interactive/2020/us/coronavirus-spread.html}} published a dynamic graphic entitled "How the Virus Won", which maps the spread of COVID-19 cases from February to June 2020 in the USA. It shows how an analysis of the associations between different COVID-19 strains and travel patterns can help understand the spread of the disease.
@@ -208,7 +227,25 @@ Another illustrative example is a simulation from ZEIT Online\footnote{\url{http
 
 
 \section{Time series}
-% Line plots, frequency domain, NY times tile plots w/ cases represented in color intensity
+% Line plots, frequency domain, NY times tile plots w/ cases represented in colour intensity
+
+Visualisations are typically created for a specific purpose, and during a pandemic it is particularly critical to show the evolution of the situation over time. This not only allows individuals to compare the present to past case counts, but also allows for forecasting and prediction of the future based on the current state. Time series plots are the most natural choice for these goals, and over the course of the pandemic, many different attempts have been made to show time series information using different graphical forms. 
+
+\begin{figure}
+\centering
+\includegraphics[width=.99\linewidth]{wapo-covid-monitoring}
+\caption{COVID monitoring summary charts on the Washington Post's Coronavirus page. Source: \url{https://www.washingtonpost.com/coronavirus/}, 2022-01-17.}
+\label{fig:wapo-covid-time-series}
+\end{figure}
+
+The most obvious time-series plot is also the most common: plotting cases against date, often with a 7 or 14-day smooth to handle periodicity in case reporting due to the work week, as shown in \Cref{fig:wapo-covid-time-series}. This allows for individuals to assess the current situation and easily compare the current number of cases to past times for which the individual has a direct reference for what to expect in impact to daily life. Often, as in \Cref{fig:wapo-covid-time-series}, these time series show multiple variables: cases, deaths, and hospitalizations (and sometimes vaccinations) to provide a more comprehensive view of the situation; this is particularly useful as there has been some decoupling of case numbers and hospitalizations/deaths with the emergence of effective vaccinations and strains which are more contagious but potentially also less severe. Many outlets also provide additional charts designed to provide some immediate context to readers, as shown in \Cref{fig:wapo-context}. 
+
+\begin{figure}
+\centering
+\includegraphics[width=.5\linewidth]{wapo-covid-context}
+\caption{Some outlets provide contextual information to assist readers with interpreting time-series plots. Source: Washington Post Coronavirus Tracking, \url{https://www.washingtonpost.com/graphics/2020/national/coronavirus-us-cases-deaths/}.}
+\label{fig:wapo-context}
+\end{figure}
 
 <<freq-domain-plot, include = F, eval = F>>=
 show_states <- c("California", "Texas", "New York", "Arizona", "Iowa", "Washington")
@@ -250,14 +287,14 @@ tmp2 <- bind_rows(
   
 
 ggplot(data = tmp2, aes(x = date, ymin = 0, ymax = y, 
-                        color = whole_num_days, 
+                        colour = whole_num_days, 
                         fill = whole_num_days, 
                         group = whole_num)) + 
   geom_ribbon() + 
   facet_grid(state~.) + 
   scale_x_date(date_breaks = "month", date_labels = "%B") +
   scale_y_continuous(breaks = c(n/2, n), labels = paste0(c(n/2000, n/1000), "k"))  + 
-  scale_color_gradientn(guide = 'none', paste0("Days to ", n/1000, "k\nmore cases"), space = "Lab", 
+  scale_colour_gradientn(guide = 'none', paste0("Days to ", n/1000, "k\nmore cases"), space = "Lab", 
     trans = "log10",
     colours = darkblueseqpal
     ) + 
@@ -266,7 +303,7 @@ ggplot(data = tmp2, aes(x = date, ymin = 0, ymax = y,
     colours = blueseqpal) + 
   my_theme + 
   theme(axis.title = element_blank(), 
-        legend.background = element_rect(fill = "transparent", color = NA), 
+        legend.background = element_rect(fill = "transparent", colour = NA), 
         legend.position = c(0, .66), legend.justification = c(0, 1), legend.direction = "horizontal")
 @
 
@@ -274,7 +311,7 @@ ggplot(data = tmp2, aes(x = date, ymin = 0, ymax = y,
 % https://twitter.com/AndToddsaid/status/1314231055096971265 is a horrible set of graphs and a great example of the snark associated with covid management policy and geographic comparisons... 
 
 \section{To log or not to log}
-As COVID cases grow quasi-exponentially while there are susceptible members of the population (subject to the effectiveness of mitigation measures and testing availability), it seems natural to use log scales to allow for more effective comparisons of slight changes in case counts over time. In addition, log scales make it possible to compare regions with different populations or infection rates in the same chart. As noted previously, however, interpreting log scales requires levels of numerical sophistication that may not be appropriate for the general public. Even researchers do not always read and interpret log scales correctly\citep{mengeLogarithmicScalesEcological2018}; expecting the general public to do so is difficult under normal circumstances\citep{hecklerStudentAccuracyReading2013} is difficult. When panic, fear, uncertainty, and doubt about the situation are added to the mix, 
+As COVID cases grow quasi-exponentially while there are susceptible members of the population (subject to the effectiveness of mitigation measures and testing availability), it seems natural to use log scales to allow for more effective comparisons of slight changes in case counts over time. In addition, log scales make it possible to compare regions with different populations or infection rates in the same chart. As noted previously, however, interpreting log scales requires levels of numerical sophistication that may not be appropriate for the general public. Even researchers do not always read and interpret log scales correctly\citep{mengeLogarithmicScalesEcological2018}; expecting the general public to do so is difficult under normal circumstances\citep{hecklerStudentAccuracyReading2013} is difficult. When panic, fear, uncertainty, and doubt about the situation are added to the mix, it is easy to imagine that we become even worse when interpreting graphics.
 % Discussion of how this section's conclusions change with the pandemic
 
 One issue with assessing the use of log scales is that their effectiveness changes with the stage of the pandemic and the amount (and varieties) of data shown. Initially, log scales were incredibly useful at showing case counts, because minimal mitigation measures were in place and the growth of case counts (or presumptive positive cases, in absence of available testing) was fairly close to exponential. In addition, the use of log scales allowed for the comparison of nominal cases across entities with large population differences: in the US, we could compare cases in New York and California with cases in Michigan and Washington, even though the population of Michigan and Washington are much lower than the population of either New York or California. 
@@ -324,10 +361,8 @@ While log scales are not necessarily intuitive, many outlets tried to make the g
 \label{fig:diag-ref-lines}
 \end{figure}
 
-
-
 % Problems with log scales
-However, after the first wave of COVID, the issues with log scales became more apparent: it was difficult to detect slight increases in case counts that indicated the beginning of a new wave amid a background level of spread, as demonstrated in  \Cref{fig:log-scale-failures}. Diagonal reference lines from the origin were also less helpful, as the growth of cases or deaths was no longer approximately exponential and varied over time; for these reference lines to be effective there would need to be a clear idea of when the case counts started to increase exponentially, which is difficult to determine whilst in the thick of a potential COVID wave. 
+However, after the first wave of COVID, the issues with log scales became more apparent: it was difficult to detect slight increases in case counts that indicated the beginning of a new wave amid a background level of spread, as demonstrated in  \Cref{fig:log-scale-failures}. Diagonal reference lines from the origin were also less helpful, as the growth of cases or deaths was no longer approximately exponential and varied over time; for these reference lines to be effective there would need to be a clear idea of when the case counts started to increase exponentially, which is difficult to determine whilst in the thick of a potential COVID wave. Occasionally graphs with manually drawn reference lines were made available, but usually only in a retrospective manner, as in \Cref{fig:log-scale-ref-multiple}. 
 
 <<log-scale-failures, echo = F, fig.width = 8, fig.height = 4, out.width = ".95\\linewidth", message = F, error = F, warning = F, fig.cap = "One problem with log scales is that if there is a background level of spread, it can be hard to notice the introduction of an additional source of exponential spread. Linear scales do not have this problem - the exponential source is noticeable very quickly in the total line, but on the log scale it is much harder to discern when the exponential source causes the total line to diverge from the background. In the top-right corner, it is difficult to identify that there is an exponential increase in cases amid the baseline, even though the exponential source makes up approximately 50\\% of the cases at the end of the time period shown." >>=
 # Set up labeller to tweak things 
