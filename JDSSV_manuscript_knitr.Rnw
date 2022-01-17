@@ -319,6 +319,14 @@ While traditionally, time-series information has been limited to charts with tim
 \label{sec:rankings}
 
 The plague is always the others: This is the short formula for dealing with infectious diseases from a historical perspective \citep{thiessen2021}. Sociologists have coined the term "othering" for such attributions of the others \citep{mountz2009}. This refers to the observation that above all new, unknown threats are projected onto "strangers" and "the others". Closing the borders and restricting access to the country became a popular means of controlling the spread of the disease. Unsurprisingly, the prevailing visual narrative focused on comparisons often fuelled by political rivalry, historical dependencies, recent withdrawal from supranational institutions or regional competitions. An ongoing debate about the true extent of the dangers of covid-19 and how best to combat it, combined with daily availability and public access to data at all types of adminsitratory levels, fostered ongoing competition and the derivation of leaderboards. 
+
+\begin{figure}\centering
+\includegraphics[width=\linewidth]{ft_deathrates_bar}\\
+\includegraphics[width=\linewidth]{ft-deathcoiunts_area}
+\caption{Ordered death rates in countrie and the temporal evolution of the death toll share in major world regions. Source: Financial Times, \url{https://www.ft.com/content/a2901ce8-5eb7-4633-b89c-cbdf5b386938}}
+\label{fig:ft-death-ranking}
+\end{figure}
+
 % https://twitter.com/AndToddsaid/status/1314231055096971265 is a horrible set of graphs and a great example of the snark associated with covid management policy and geographic comparisons... 
 
 \section{To log or not to log}
