@@ -259,8 +259,8 @@ Other time-series representations were more abstract, sacrificing exact data rep
 
 \begin{figure}
 \centering
-\includegraphics[width=.3\linewidth]{NYT-heatmap-crop}
-\includegraphics[width=.3\linewidth]{NYT-heatmap-crop3}
+\includegraphics[width=.3\linewidth]{NYT-heatmap-crop}\hfill
+\includegraphics[width=.3\linewidth]{NYT-heatmap-crop3}\hfill
 \includegraphics[width=.3\linewidth]{NYT-heatmap-crop2}
 \caption{Sparklines style heatmaps embedded in a table of coronavirus data by state. Over the course of Summer 2020, the specific measures shown changed, even though the form of the data remained highly similar. Source: \url{https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html} (May 6, 2020; June 15, 2020; and July 24, 2020, respectively) }
 
