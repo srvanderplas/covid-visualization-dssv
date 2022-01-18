@@ -321,11 +321,14 @@ While traditionally, time-series information has been limited to charts with tim
 The plague is always the others: This is the short formula for dealing with infectious diseases from a historical perspective \citep{thiessen2021}. Sociologists have coined the term "othering" for such attributions of the others \citep{mountz2009}. This refers to the observation that above all new, unknown threats are projected onto "strangers" and "the others". Closing the borders and restricting access to the country became a popular means of controlling the spread of the disease. Unsurprisingly, the prevailing visual narrative focused on comparisons often fuelled by political rivalry, historical dependencies, recent withdrawal from supranational institutions or regional competitions. An ongoing debate about the true extent of the dangers of covid-19 and how best to combat it, combined with daily availability and public access to data at all types of adminsitratory levels, fostered ongoing competition and the derivation of leaderboards. 
 
 \begin{figure}\centering
-\includegraphics[width=\linewidth]{ft_deathrates_bar}\\
-\includegraphics[width=\linewidth]{ft-deathcoiunts_area}
-\caption{Ordered death rates in countrie and the temporal evolution of the death toll share in major world regions. Source: Financial Times, \url{https://www.ft.com/content/a2901ce8-5eb7-4633-b89c-cbdf5b386938}}
+\includegraphics[width=\linewidth]{Figures_Web/ft_deathrates_bar}\\
+\includegraphics[width=\linewidth]{Figures_Web/ft_deathcounts_area}
+\caption{Ordered death rates in countries and the temporal evolution of the death toll share in major world regions. Source: Financial Times, \url{https://www.ft.com/content/a2901ce8-5eb7-4633-b89c-cbdf5b386938}}
 \label{fig:ft-death-ranking}
 \end{figure}
+
+The bar charts used for this purpose (see top image in Fig.~\ref{fig:ft-death-ranking}) are straigthforward and provide typically a good way to show the "leading" countries or regions. Emphasis on specific countries is either preconfigured by the creator of the chart or can be modified interactively in the online version by check boxes and drop-down menus. These bar charts also allow easy adjustment of the count data to population size or other meaningful standard. Streamgraphs (see lower image in Fig.~\ref{fig:ft-death-ranking}) are a special type of stacked area graphs and became quite popular around 2008, being used by the New York Times to visualise box office results of movies \citep{streamgraph}. Their usefulness depends heavily on the clarity of the pattern. Various design choices such as the ordering of the different groups have a strong impact on the visual impression and message conveyed by the graph. Small variations in the proportions of the groups are almost impossible to detect, but streamgraphs give a good indication of which group is predominant at any given time. 
+
 
 % https://twitter.com/AndToddsaid/status/1314231055096971265 is a horrible set of graphs and a great example of the snark associated with covid management policy and geographic comparisons... 
 
