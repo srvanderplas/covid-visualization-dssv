@@ -510,7 +510,13 @@ Unfortunately, there are not a lot of good options for supporting forecasting de
 
 
 \section{Summary and discussion} \label{sec:summary}
+Throughout the pandemic (thus far), visual representations of data have been an integral part of scientific communication. While not always optimal, these graphics have attempted to provide meaningful context, to encourage individual and collective action, and to help individuals grapple with the scale of the pandemic in cases, deaths, vaccinations, and interventions. As in any developing situation, choices made at some points in the pandemic did not always persist - many news outlets refined their charts and approach to the design of graphics over the course of the pandemic. 
 
+
+%Broad conclusions: 
+% importance of scientific communication
+% graphs are weaponized for misinformation as well as information?
+% Need to improve broad guidelines for communication, underpinning with studies on perception and graphics that 
 
 %% -- Optional special unnumbered sections -------------------------------------
 \newpage
