@@ -105,6 +105,9 @@ library(ggrepel)
 library(gridExtra)
 cvstate <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv")
 
+if (!dir.exists("Data")) dir.create("Data")
+write_csv(cvstate, file = "Data/covid-data-nyt.csv") # Save data just in case
+
 cvstate <- cvstate %>%
   group_by(state, fips) %>%
   mutate(date_100th_case = min(date[cases >= 100]),
