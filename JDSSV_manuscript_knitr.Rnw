@@ -504,9 +504,13 @@ Unfortunately, there are not a lot of good options for supporting forecasting de
 
 
 \section{Summary and discussion} \label{sec:summary}
-Throughout the pandemic (thus far), visual representations of data have been an integral part of scientific communication. While not always optimal, these graphics have attempted to provide meaningful context, to encourage individual and collective action, and to help individuals grapple with the scale of the pandemic in cases, deaths, vaccinations, and interventions. As in any developing situation, choices made at some points in the pandemic did not always persist - many news outlets refined their charts and approach to the design of graphics over the course of the pandemic. 
+Throughout the pandemic (thus far), visual representations of data have been an integral part of scientific communication. While not always optimal, these graphics have attempted to provide meaningful context, to encourage individual and collective action, and to help individuals grapple with the scale of the pandemic in cases, deaths, vaccinations, and interventions. As in any developing situation, choices made at some points in the pandemic did not always persist - many news outlets refined their charts and approach to the design of graphics over the course of the pandemic. This evolution of graphical forms has provided us with an opportunity to evaluate what worked and did not -- and why -- in a context of broad general interest. 
 
-Ubiquity of the data, persisting general interest on the topic, the rise of data journalism, and the opportunities provided by interactive and dynamic internet platforms contributed to a an ongoing trend on visual narratives of the Covid-19 pandemic. Graphical displays are used as weapons for information, but also for misinformation. Despite a growing number of guidelines for communicating statistical results transportation of the intended messages is not always straightforward and remains a challenge. The deciphering of visual icons and best practices of visual communication require furhter studies on perception and graphics.
+The visual narratives of the pandemic which have persisted over time are due in part to the rise of data journalism and interactive graphics platforms which ensure that every outlet has the ability to host engaging and visually appealing graphics; however, while these graphics are nice to look at, not all are equally functional or useful for communication purposes. As in any situation, good tools can be used and mis-used freely; we have seen charts and graphics used to perpetuate misinformation and misleading claims, even though it is far more common for charts and graphs to be used for good - to educate and inform the public.
+
+The pandemic and graphics used to show the ebb and flow of COVID cases highlight the challenges of data visualization in the modern era: even with numerous guidelines and standards for graphics, it is not straightforward to communicate about complex data, and creating charts which fully represent the intended message or messages is a challenge. It is essential that we continue to study how graphics are perceived and interpreted, supporting the guidelines and standards which exist with user studies that ground these rules in science. 
+
+% Ubiquity of the data, persisting general interest on the topic, the rise of data journalism, and the opportunities provided by interactive and dynamic internet platforms contributed to a an ongoing trend on visual narratives of the Covid-19 pandemic. Graphical displays are used as weapons for information, but also for misinformation. Despite a growing number of guidelines for communicating statistical results transportation of the intended messages is not always straightforward and remains a challenge. The deciphering of visual icons and best practices of visual communication require furhter studies on perception and graphics.
 
 %Broad conclusions: 
 % importance of scientific communication
@@ -516,19 +520,7 @@ Ubiquity of the data, persisting general interest on the topic, the rise of data
 %% -- Optional special unnumbered sections -------------------------------------
 \newpage
 \section*{Computational Details}
-
-If necessary or useful, information about certain computational details
-such as version numbers, operating systems, or compilers could be included
-in an unnumbered section. Also, auxiliary packages (say, for visualisations,
-maps, tables, \dots) that are not cited in the main text can be credited here.
-
-
-The results in this paper were obtained using
-\proglang{R}~3.5.1. \proglang{R} itself
-and all packages used are available from the Comprehensive
-\proglang{R} Archive Network (CRAN) at
-\url{https://CRAN.R-project.org/}.
-
+Graphics included in this paper not sourced from media outlets were created using data published by the New York Times at \url{https://github.com/nytimes/covid-19-data/}. Graphics were created using ggplot2\citep{ggplot2} and \proglang{R}~4.1.2. \proglang{R} itself and all packages used are available from the Comprehensive \proglang{R} Archive Network (CRAN) at \url{https://CRAN.R-project.org/}.
 
 \section*{Acknowledgments}
 
