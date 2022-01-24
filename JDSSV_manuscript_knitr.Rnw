@@ -193,7 +193,7 @@ On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (CO
 \begin{enumerate}
 \item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Especially in the case of similarly coloured areas of the regions, viewers tend to integrate them unconsciously and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of Covid-19 cases are strongly influenced by the population size of the country, but also by the number of tests performed and the accuracy of the recording and reporting system.
 \item The area-bias: The visual impression is determined more by the colour and the geographical area of the individual countries than by the number of Covid cases. Since the countries of the world differ extremely in area, the visual assessment is distorted, especially in the case of neighbouring countries with similar numbers but different areas.
-\item Color-scheme obstructions: Much research in visualisation is concerned with the appropriate choice of colour schemes, see \citep{brewer1997}. The choice of a continuous scale or a categorical scale, the choice of a scale that promotes the recognition of patterns or a scale that supports the filtering out of specific map details, influences the quality of choropleth maps.  
+\item Color-scheme obstructions: Much research in visualisation is concerned with the appropriate choice of colour schemes, see \citep{brewer1997, color2021}. The choice of a continuous scale or a categorical scale, the choice of a scale that promotes the recognition of patterns or a scale that supports the filtering out of specific map details, influences the quality of choropleth maps.  
 \end{enumerate}
 
 \begin{figure*}
@@ -529,12 +529,7 @@ Graphics included in this paper not sourced from media outlets were created usin
 
 \section*{Acknowledgments}
 
-All acknowledgments should be collected in this
-unnumbered section before the references. It may contain the usual information
-about funding and feedback from colleagues/reviewers/etc. Furthermore,
-information such as relative contributions of the authors may be added here
-(if any).
-
+First ideas have been presented at DSSV 2020. We thank our colleagues and the editors for valuable feedback and encouragement to complete this manuscript.
 
 %% -- Bibliography -------------------------------------------------------------
 %% - References need to be provided in a .bib BibTeX database.
