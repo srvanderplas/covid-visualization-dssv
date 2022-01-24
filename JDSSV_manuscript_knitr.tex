@@ -12,9 +12,6 @@
 \makeatother
 
 \definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
-\makeatletter
-\@ifundefined{AddToHook}{}{\AddToHook{package/xcolor/after}{\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}}}
-\makeatother
 \newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
 \newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
 \newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
@@ -49,14 +46,6 @@
 \definecolor{messagecolor}{rgb}{0, 0, 0}
 \definecolor{warningcolor}{rgb}{1, 0, 1}
 \definecolor{errorcolor}{rgb}{1, 0, 0}
-\makeatletter
-\@ifundefined{AddToHook}{}{\AddToHook{package/xcolor/after}{
-\definecolor{shadecolor}{rgb}{.97, .97, .97}
-\definecolor{messagecolor}{rgb}{0, 0, 0}
-\definecolor{warningcolor}{rgb}{1, 0, 1}
-\definecolor{errorcolor}{rgb}{1, 0, 0}
-}}
-\makeatother
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
@@ -169,8 +158,8 @@ At the same time, we still see a lot of defective graphics disseminated and shar
 
 The Covid 19 pandemic has amply demonstrated that policies are only effectively implemented and followed by the population if they are accepted by a large majority of the population. To achieve this goal, effective communication of quantitative evidence and statistical results between scientists, governments, the media and citizens is essential to justify the appropriateness, usefulness and relevance of the measures. 
 
-A best practice for effective communication is to present information in an understandable way (Gigerenzer et al., 2007; Gigerenzer and Edwards, 2011), for example by saying "one in ten" instead of 10\%. Using absolute rather than relative numbers, presenting information in an appealing graphic form and summarising the most important facts in "fact boxes" are some of the methods that have been developed and advocated to increase transparency in communication between stakeholders such as healthcare providers and patients (see for example: https:// www.hardingcenter.de).
-Fact boxes in combination with icon arrays are recommended for the presentation of test results. Both representations are based on natural frequencies \citep{[62],Krauss2020} and represent case numbers as simply and concretely as possible. Many scientific studies show that icon arrays help people to understand numbers and risks more easily (e.g. \cite{McDowell2019}). The Harding Center for Risk Literacy shows many other examples of transparent communication of risks, including COVID-19\footnote{\url{https://www.hardingcenter.de/de/mrna-schutzimpfung-gegen-covid-19-fuer-aeltere-menschen}}.
+A best practice for effective communication is to present information in an understandable way \citep{gigerenzerHelpingDoctorsPatients2007,gigerenzerWhatAreNatural2011}, for example by saying "one in ten" instead of 10\%. Using absolute rather than relative numbers, presenting information in an appealing graphic form and summarising the most important facts in "fact boxes" are some of the methods that have been developed and advocated to increase transparency in communication between stakeholders such as healthcare providers and patients (see for example: \url{https:// www.hardingcenter.de}).
+Fact boxes in combination with icon arrays are recommended for the presentation of test results. Both representations are based on natural frequencies \citep{gigerenzerWhatAreNatural2011,Krauss2020} and represent case numbers as simply and concretely as possible. Many scientific studies show that icon arrays help people to understand numbers and risks more easily (e.g. \cite{McDowell2019}). The Harding Center for Risk Literacy shows many other examples of transparent communication of risks, including COVID-19\footnote{\url{https://www.hardingcenter.de/de/mrna-schutzimpfung-gegen-covid-19-fuer-aeltere-menschen}}.
 
 Nevertheless, both the complexity of phenomena and the "bipolarity" of statistical thinking remain a challenge. While human thinking tends to simplify patterns and political communication also prefers a simple cause-effect relationship, real phenomena are often multivariate. Thus, in studying COVID-19 and predicting its spread, it is not only important to consider symptomatology, disease incidence and geographic distribution, population behaviour patterns, government policies, and impacts on the economy, schools, people in nursing homes, and society at large, but also to incorporate these into data analyses and communication of results. Associations observed in the data can often be caused by third party variables (confounders). In addition, much of the data comes from observational studies, which usually makes robust causal attribution problematic. However, statisticians who point out these limitations are at risk of having their statements pulled out one-sidedly in a polarised debate \citep{McConway2021}.
 
@@ -303,7 +292,15 @@ Another attempt to creatively show time-series data that has been extremely comm
 \caption{A screenshot from Stats on Clock's bar chart race showing counts of covid cases over time throughout the pandemic. Source: \url{https://www.youtube.com/watch?v=8WH-bTH6GqI}}\label{fig:barchart-race}
 \end{figure}
 
+As people grappled with the scale of the pandemic and the lives lost as a result, a different set of data displays attempted to provide context to this loss over time. In the New York times, this took the form of a story showing the accumulation of the first 100,000 deaths due to covid, with occasional short quotes from individuals' obituaries to humanize the names\citep{barryRemembering1000002020}. While this is not a typical time-series chart, as the user scrolled through the page the pace of the names increases, showing the scale of the pandemic in a visceral way.
 
+A slightly different approach by the BBC's Visual and Data Journalism team, shown in \Cref{fig:bbc-flower}, displayed the Covid cases and deaths as a growing flower, with the stem proportional to the number of cases and the flower petals showing the deaths over time\citep{thebbcvisualanddatajournalismteamCoronavirusHowCan2020}. This visualization is intended to evoke emotion, with the flower representation as an explicitly recognized symbol of grief; it is clearly not about showing specific case counts and deaths numerically. The visualization comes with sound as well, an attempt to make the pandemic an auditory experience as well as a visual one.
+
+\begin{figure}
+\centering
+\includegraphics[width=.8\linewidth]{Figures_Web/BBC_flower_time_series}
+\caption{The BBC Visual and Data Journalism Team's Covid flower, showing the cases and deaths over time. Source: \url{https://www.bbc.co.uk/news/resources/idt-7464500a-6368-4029-aa41-ab94e0ee09fb}}\label{fig:bbc-flower}
+\end{figure}
 % BBC flowers w/ sonification https://www.bbc.co.uk/news/resources/idt-7464500a-6368-4029-aa41-ab94e0ee09fb
 
 % Other animations?
@@ -410,7 +407,13 @@ Unfortunately, there are not a lot of good options for supporting forecasting de
 
 
 \section{Summary and discussion} \label{sec:summary}
+Throughout the pandemic (thus far), visual representations of data have been an integral part of scientific communication. While not always optimal, these graphics have attempted to provide meaningful context, to encourage individual and collective action, and to help individuals grapple with the scale of the pandemic in cases, deaths, vaccinations, and interventions. As in any developing situation, choices made at some points in the pandemic did not always persist - many news outlets refined their charts and approach to the design of graphics over the course of the pandemic. 
 
+
+%Broad conclusions: 
+% importance of scientific communication
+% graphs are weaponized for misinformation as well as information?
+% Need to improve broad guidelines for communication, underpinning with studies on perception and graphics that 
 
 %% -- Optional special unnumbered sections -------------------------------------
 \newpage
@@ -453,14 +456,14 @@ information such as relative contributions of the authors may be added here
 %% - After the bibliography with page break.
 %% - With proper section titles and _not_ just "Appendix".
 
-\newpage
-
-\begin{appendix}
-
-\section{More Technical Details} \label{app:technical}
-
-
-Appendices can be included after the bibliography (with a page break). Each section within the appendix should have a proper section title (rather than just \emph{Appendix}).
+% \newpage
+% 
+% \begin{appendix}
+% 
+% \section{More Technical Details} \label{app:technical}
+% 
+% 
+% Appendices can be included after the bibliography (with a page break). Each section within the appendix should have a proper section title (rather than just \emph{Appendix}).
 
 %For more technical style details, please check out JSS's style FAQ at
 %\url{https://www.jstatsoft.org/pages/view/style#frequently-asked-questions}
@@ -470,25 +473,25 @@ Appendices can be included after the bibliography (with a page break). Each sect
 %  \item Use vectorized graphics formats such as eps and pdf when possible. Graphics should be of high quality while trying to minimize the file size.
 %\end{itemize}
 
-
-\section[Using BibTeX]{Using \textsc{Bib}{\TeX}} \label{app:bibtex}
-
-References need to be provided in a \textsc{Bib}{\TeX} file (\code{.bib}). All references should be made with \verb|\cite|, \verb|\citet|, \verb|\citep|, \verb|\citealp| etc.\ (and never hard-coded). This commands yield different formats of author-year citations and allow to include additional details (e.g., pages, chapters, \dots) in brackets. 
-%In case you are not familiar with these commands see the JSS style FAQ for details.
-
-Cleaning up \textsc{Bib}{\TeX} files is a somewhat tedious task -- especially when acquiring the entries automatically from mixed online sources. However, it is important that informations are complete and presented in a consistent style to avoid confusions. JDSSV requires the following format.
-\begin{itemize}
-  \item Specific markup (\verb|\proglang|, \verb|\pkg|, \verb|\code|) should
-    be used in the references.
-  \item Titles should be inserted in title case.
-  \item Journal titles should not be abbreviated and in title case.
-  \item DOIs should be included where available.
-  \item Software should be properly cited as well. For \proglang{R} packages
-    \code{citation("pkgname")} typically provides a good starting point.
-\end{itemize}
-\end{appendix}
-\newpage
-%% -----------------------------------------------------------------------------
+% 
+% \section[Using BibTeX]{Using \textsc{Bib}{\TeX}} \label{app:bibtex}
+% 
+% References need to be provided in a \textsc{Bib}{\TeX} file (\code{.bib}). All references should be made with \verb|\cite|, \verb|\citet|, \verb|\citep|, \verb|\citealp| etc.\ (and never hard-coded). This commands yield different formats of author-year citations and allow to include additional details (e.g., pages, chapters, \dots) in brackets. 
+% %In case you are not familiar with these commands see the JSS style FAQ for details.
+% 
+% Cleaning up \textsc{Bib}{\TeX} files is a somewhat tedious task -- especially when acquiring the entries automatically from mixed online sources. However, it is important that informations are complete and presented in a consistent style to avoid confusions. JDSSV requires the following format.
+% \begin{itemize}
+%   \item Specific markup (\verb|\proglang|, \verb|\pkg|, \verb|\code|) should
+%     be used in the references.
+%   \item Titles should be inserted in title case.
+%   \item Journal titles should not be abbreviated and in title case.
+%   \item DOIs should be included where available.
+%   \item Software should be properly cited as well. For \proglang{R} packages
+%     \code{citation("pkgname")} typically provides a good starting point.
+% \end{itemize}
+% \end{appendix}
+% \newpage
+% %% -----------------------------------------------------------------------------
 
 
 \end{document}
