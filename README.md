@@ -1,4 +1,4 @@
-[Submitted paper](JDSSV_manuscript_knitr)
+[Submitted paper](JDSSV_manuscript_knitr.pdf)
 
 Our paper uses data from the New York Times [github repo](https://github.com/nytimes/covid-19-data/). (2022) Coronavirus (Covid-19) Data in the United States. Retrieved 2022-01-24 from https://github.com/nytimes/covid-19-data.
 
