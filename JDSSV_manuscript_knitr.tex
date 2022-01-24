@@ -174,6 +174,7 @@ A best practice for effective communication is to present information in an unde
 \section{The global narrative}
 
 On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (COVID-19) a pandemic, and since that date at the latest, the global distribution of the disease has been in the public eye. The spatial spread of the virus and the resulting cases and deaths are commonly visualized by choropleth maps, see for example \Cref{fig:choro1} showing the total number of infections reported in each country as of January 14, 2022. For the pandemic perspective, a central element of the narrative is the ubiquity of the disease and the accompanying global impact. Choropleth maps based on raw numbers of cases might look convincing and fit to the purpose, but neglect a number of well-know caveats for statistical reporting and visualisation:
+
 \begin{enumerate}
 \item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Especially in the case of similarly coloured areas of the regions, viewers tend to integrate them unconsciously and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of Covid-19 cases are strongly influenced by the population size of the country, but also by the number of tests performed and the accuracy of the recording and reporting system.
 \item The area-bias: The visual impression is determined more by the colour and the geographical area of the individual countries than by the number of Covid cases. Since the countries of the world differ extremely in area, the visual assessment is distorted, especially in the case of neighbouring countries with similar numbers but different areas.
@@ -186,7 +187,8 @@ On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (CO
 	\label{fig:choro1}
 \end{figure*}
 
-Choropleth maps are quite commonly used by media companies and governmental organisations and it is easy to find good and bad examples of their usage. Proportional symbol maps, see Fig.~\ref{fig:propsymb} or graduated symbol maps place scaled symbols or diagrams directly on the input map, often on the centroid of the regions. The symbol, most commonly a disk or a square, is scaled such that its area corresponds to the data value of the region.
+Choropleth maps are quite commonly used by media companies and governmental organisations and it is easy to find good and bad examples of their usage. Proportional symbol maps, see Fig.~\ref{fig:propsymb} or graduated symbol maps place scaled symbols or diagrams directly on the input map, often on the centroid of the regions. The symbol, most commonly a disk or a square, is scaled such that its area corresponds to the data value of the region. 
+Clearly, the visual impression of any map based illustration depends on the projection chosen for the underlying map as the examples quite often demonstrate a western-centric viewpoint.
 
 
 \begin{figure*}
@@ -195,21 +197,20 @@ Choropleth maps are quite commonly used by media companies and governmental orga
 	\label{fig:propsymb}
 \end{figure*}
 
-And clearly, the visual impression of any map based illustration depends on the projection chosen for the underlying map as the examples quite often demonstrate a western-centric viewpoint. 
-
 The narrative of the global perspective seems to be highly limited to the aspect of a pandemic affecting the entire globe. None of the above viusalisations intends to provide a deeper insight into the spatial distribution of the phenomenon, neither within the administratively motivated spatial borders nor across them. The use of maps in this context more often focuses on the comparative aspects: how are we doing as opposed to our neighbors, which strategy to fight Covid-19 is better? We will examine these topics more closely in Section~\ref{sec:rankings}.
 
-\begin{figure}
-\centering
-\begin{subfigure}[t]{.45\textwidth}
-\includegraphics[width=\textwidth]{covid-tracking-hex-cartogram}
-\caption{Hexagonal Cartogram of Covid-19 cases in the United States by state, per million people. This somewhat mitigates the area bias issue, but is still subject to other perceptual biases. Source: The COVID Tracking Project at The Atlantic \url{https://covidtracking.com/data/charts/us-daily-positive-cases}.}\label{fig:hex-cartogram}
-\end{subfigure}\hfill
-\begin{subfigure}[t]{.45\textwidth}
-\includegraphics[width=\textwidth]{nyt-covid-scaled-choro}
-\caption{Choropleth Map of covid cases per country, scaled by population. Source: New York Times \url{https://www.nytimes.com/interactive/2021/world/covid-cases.html}.}\label{fig:scaled-choro}
-\end{subfigure}
-\end{figure}
+% \begin{figure}
+% \centering
+% \begin{subfigure}[t]{.45\textwidth}
+% \includegraphics[width=\textwidth]{covid-tracking-hex-cartogram}
+% \caption{Hexagonal Cartogram of Covid-19 cases in the United States by state, per million people. This somewhat mitigates the area bias issue, but is still subject to other perceptual biases. Source: The COVID Tracking Project at The Atlantic \url{https://covidtracking.com/data/charts/us-daily-positive-cases}.}\label{fig:hex-cartogram}
+% \end{subfigure}\hfill
+% \begin{subfigure}[t]{.45\textwidth}
+% \includegraphics[width=\textwidth]{nyt-covid-scaled-choro}
+% \caption{Choropleth Map of covid cases per country, scaled by population. Source: New York Times \url{https://www.nytimes.com/interactive/2021/world/covid-cases.html}.}\label{fig:scaled-choro}
+% \end{subfigure}
+% \caption{Modifications of choropleth maps which attempt to address the area bias of choropleths in different ways.}
+% \end{figure}
 
 
 Throughout the pandemic, both in choropleth maps and time-series graphs, creators have had to grapple with scale. When scales automatically adjust, mental comparisons across time can become misleading, because e.g. the colour scale from yesterday does not mean the same thing as it did today, as the range has expanded and the colours have stayed the same. This problem is more noticeable in choropleths than in time-series charts, where we are more likely to expect and notice a scale change, but it is still a fundamental issue in many different types of charts. Some publications leaned into this by arranging their graphics to highlight the fact that cases were ``off the charts", as in \Cref{fig:jbm-tweet}, implicitly cuing readers that the situation was exceptional and worthy of their attention.
@@ -416,7 +417,7 @@ Throughout the pandemic (thus far), visual representations of data have been an 
 
 The visual narratives of the pandemic which have persisted over time are due in part to the rise of data journalism and interactive graphics platforms which ensure that every outlet has the ability to host engaging and visually appealing graphics; however, while these graphics are nice to look at, not all are equally functional or useful for communication purposes. As in any situation, good tools can be used and mis-used freely; we have seen charts and graphics used to perpetuate misinformation and misleading claims, even though it is far more common for charts and graphs to be used for good - to educate and inform the public.
 
-The pandemic and graphics used to show the ebb and flow of COVID cases highlight the challenges of data visualization in the modern era: even with numerous guidelines and standards for graphics, it is not straightforward to communicate about complex data, and creating charts which fully represent the intended message is a challenge. It is essential that we continue to study how graphics are perceived and interpreted, supporting the guidelines and standards which exist with user studies that ground these rules in science. 
+The pandemic and graphics used to show the ebb and flow of COVID cases highlight the challenges of data visualization in the modern era: even with numerous guidelines and standards for graphics, it is not straightforward to communicate about complex data, and creating charts which fully represent the intended message or messages is a challenge. It is essential that we continue to study how graphics are perceived and interpreted, supporting the guidelines and standards which exist with user studies that ground these rules in science. 
 
 % Ubiquity of the data, persisting general interest on the topic, the rise of data journalism, and the opportunities provided by interactive and dynamic internet platforms contributed to a an ongoing trend on visual narratives of the Covid-19 pandemic. Graphical displays are used as weapons for information, but also for misinformation. Despite a growing number of guidelines for communicating statistical results transportation of the intended messages is not always straightforward and remains a challenge. The deciphering of visual icons and best practices of visual communication require furhter studies on perception and graphics.
 
@@ -428,10 +429,7 @@ The pandemic and graphics used to show the ebb and flow of COVID cases highlight
 %% -- Optional special unnumbered sections -------------------------------------
 \newpage
 \section*{Computational Details}
-Graphics included in this paper not sourced from media outlets were created using data published by the New York Times at \url{https://github.com/nytimes/covid-19-data/}. Graphics were created using ggplot2\citep{ggplot2} and \proglang{R}~4.1.2. \proglang{R} itself
-and all packages used are available from the Comprehensive
-\proglang{R} Archive Network (CRAN) at
-\url{https://CRAN.R-project.org/}.
+Graphics included in this paper not sourced from media outlets were created using data published by the New York Times at \url{https://github.com/nytimes/covid-19-data/}. Graphics were created using ggplot2\citep{ggplot2} and \proglang{R}~4.1.2. \proglang{R} itself and all packages used are available from the Comprehensive \proglang{R} Archive Network (CRAN) at \url{https://CRAN.R-project.org/}.
 
 \section*{Acknowledgments}
 
