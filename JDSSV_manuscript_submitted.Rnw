@@ -160,20 +160,23 @@ These goals and their priorities were adapted as dynamically as the virus mutate
 
 \subsection{Data Journalism and the Media}
 
-In recent decades, many media organisations have established data teams that received unprecedented attention and wide-ranging opportunities during the pandemic to showcase their skills and abilities, not only in visualising data, but also in explaining their data collection and data analysis strategies and methods. COVID-19 allowed these data journalists to prove their utility in newsrooms, presenting data in digestible form to the public in news articles but also Data journalism will certainly be one of the beneficiaries of the Covid-19 pandemic and it has become an important part of news publishing, with COVID-19 delivering many excellent applications, often presented in an interactive visual format on the web, such as dashboards.
+In recent decades, many media organisations have established data teams that received unprecedented attention and wide-ranging opportunities during the pandemic to showcase their skills and abilities, not only in visualising data, but also in explaining their data collection and data analysis strategies and methods. COVID-19 allowed these data journalists to prove their utility in newsrooms, presenting data in digestible form to the public in news articles but also Data journalism will certainly be one of the beneficiaries of the Covid-19 pandemic and it has become an important part of news publishing, with COVID-19 delivering many excellent applications, often presented in an interactive visual format on the web, such as dashboards\citep{kochWelcomeRevolutionCOVID192021}.
 
 %shall we include a list of newspapers/media outlets that we aim at covering?
 
-At the same time, we still see a lot of defective graphics disseminated and shared: some that violate fundamental visualisation and statistical reporting principles such as accuracy, relevance, timeliness, clarity, coherence, and reproducibility. These principles have been laid out in numerous standards for statistical reporting in the application areas, such as the ESS standard for quality reports \citep{ess2009}, the CONSORT, PRISMA, CHEERs guidelines, and others (see https://equator-network.org). Efforts to improve the communication of quantitative and statistical information date from the beginning mass media and the ability to create charts and tables from data systematically, and while there continue to be efforts made in this area, historical papers outline many of the same issues that we still struggle with today \citep{ASA-standards,haemerPresentationProblemsArea1949,kovermanPLANNINGVISUALPRESENTATION1961,fienbergGraphicalMethodsStatistics1979,Hoffrage2261,Tufte2001,Rosling2011,otavamylona2020}. In other words, while our **technology** for recording, visually summarizing, and communicating information distilled from data has vastly improved over the past 100 years, we still face many of the same problems when **designing** charts which communicate data accurately and effectively.
+At the same time, we still see a lot of defective graphics disseminated and shared: some that violate fundamental statistical and visualisation design principles such as accuracy, relevance, timeliness, clarity, coherence, and reproducibility. 
+These principles have been laid out in numerous standards for statistical reporting in the application areas, such as the ESS standard for quality reports \citep{ess2009}, the CONSORT, PRISMA, CHEERs guidelines, and others (see https://equator-network.org). 
+Efforts to improve the communication of quantitative and statistical information date from the beginning mass media and the ability to create charts and tables from data systematically, and while there continue to be efforts made in this area, historical papers outline many of the same issues that we still struggle with today \citep{ASA-standards,haemerPresentationProblemsArea1949,kovermanPLANNINGVISUALPRESENTATION1961,fienbergGraphicalMethodsStatistics1979,Hoffrage2261,Tufte2001,Rosling2011,otavamylona2020}.
+In other words, while our **technology** for recording, visually summarizing, and communicating information distilled from data has vastly improved over the past 100 years, we still face many of the same problems when **designing** charts which communicate data accurately and effectively.
 
-The Covid 19 pandemic has amply demonstrated that policies are only effectively implemented and followed by the population if they are accepted by a large majority of the population. To achieve this goal, it is essential that scientists, governments, the media, and citizens all effectively communicate in order to justify the appropriateness, usefulness and relevance of the measures. This is as true for guidelines about the use and creation of charts as it is for policies like masks and vaccines. % Making it a bit more explicit
 
 \subsection{Effective Data Communication}
-A best practice for effective communication (graphical or otherwise) is to present information in an understandable way \citep{gigerenzerHelpingDoctorsPatients2007,gigerenzerWhatAreNatural2011}, for example by saying "one in ten" instead of 10\%. Using absolute rather than relative numbers. 
-Presenting information in an appealing graphic form and summarising the most important facts in "fact boxes" are some of the methods that have been developed and advocated to increase transparency in communication between stakeholders such as healthcare providers and patients (see for example: \url{https:// www.hardingcenter.de}). 
-Such "fact boxes" combined with the dynamic layer of the internet allowed for illustrative simulations of the spread of the epidemic, for example as presented already on 14 March 2020 in the Washington Post\footnote{\url{https://www.washingtonpost.com/graphics/2020/world/corona-simulator/}} with the title "Why outbreaks like coronavirus spread exponentially, and how to flatten the curve".  Nevertheless, both the complexity of phenomena and the "bipolarity" of statistical thinking remain a challenge. 
-While human thinking tends to simplify patterns and political communication also prefers a simple cause-effect relationship, real phenomena are often multivariate. 
-Thus, in studying COVID-19 and predicting its spread, it is not only important to consider symptomatology, disease incidence and geographic distribution, population behaviour patterns, government policies, and impacts on the economy, schools, people in nursing homes, and society at large, but also to incorporate these into data analyses and communication of results. 
+A best practice for effective communication (graphical or otherwise) is to present information in an understandable way \citep{gigerenzerHelpingDoctorsPatients2007,gigerenzerWhatAreNatural2011}, for example by saying "one in ten" instead of 10\%, or using absolute rather than relative numbers. 
+Presenting information in a visually appealing graphic form and highlighting the most important points in "fact boxes" is one extremely effective way to engage readers while focusing on key takeaway points. 
+This approach was developed to increase effective communication between stakeholders such as healthcare providers and patients (see for example: \url{https://www.hardingcenter.de}, archived in ). 
+Such "fact boxes" combined with the dynamic layer of the internet allowed for illustrative simulations of the spread of the epidemic, for example as presented on 14 March 2020 in the Washington Post\footnote{\url{https://www.washingtonpost.com/graphics/2020/world/corona-simulator/}} with the title "Why outbreaks like coronavirus spread exponentially, and how to flatten the curve".  Nevertheless, both the complexity of phenomena and the "bipolarity" of statistical thinking remain a challenge. 
+While human thinking tends to simplify patterns, and political communication also prefers a simple cause-effect relationship, real phenomena are often multivariate. 
+Thus, in studying COVID-19 and predicting its spread, it is important not only to consider symptomatology, disease incidence and geographic distribution, population behaviour patterns, government policies, and impacts on the economy, schools, people in nursing homes, and society at large, but also to incorporate these into data analyses and communication of results. 
 Associations observed in the data can often be caused by third party variables (confounders). 
 In addition, much of the data comes from observational studies, which usually makes robust causal attribution problematic. 
 However, statisticians who point out these limitations are at risk of having their statements pulled out one-sidedly in a polarised debate \citep{McConway2021}.
@@ -196,10 +199,14 @@ Our focus in this paper is to highlight, analyze, and discuss a selection of cha
 
 \section{The global narrative}
 
-On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (COVID-19) a pandemic, and since that date at the latest, the global distribution of the disease has been in the public eye. The spatial spread of the virus and the resulting cases and deaths during this initial period were commonly visualized by choropleth maps, see for example \Cref{fig:choro1} showing the total number of infections reported in each country as of January 14, 2022. A central element of the narrative during March 2020 was the ubiquity of the disease and the accompanying global impact. While choropleth maps based on raw numbers of cases might look convincing and are an obvious choice under the circumstances, the use of these charts ignores a number of well-know caveats for statistical reporting and visualisation:
+On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (COVID-19) a pandemic, and since that date at the latest, the global distribution of the disease has been in the public eye. The spatial spread of the virus and the resulting cases and deaths during this initial period were commonly visualized by choropleth maps, see for example \Cref{fig:choro1} showing the total number of infections reported in each country as of January 14, 2022. A central element of the narrative during March 2020 was the ubiquity of the disease and the accompanying global impact. 
+
+
+Choropleth maps are quite commonly used by media companies and governmental organisations and it is easy to find good and bad examples of their usage. 
+While choropleth maps based on raw numbers of cases might look convincing and are an obvious choice under the circumstances, the use of these charts ignores a number of well-know caveats for statistical reporting and visualisation:
 
 \begin{enumerate}
-\item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Viewers tend to integrate similarly coloured areas of the map unconsciously, and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of Covid-19 cases are strongly influenced by the population size of the country, but also by the number of tests performed and the accuracy of the recording and reporting system.
+\item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Viewers tend to integrate similarly coloured areas of the map unconsciously, and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of Covid-19 cases are strongly influenced by the population size of the country as well as by the number of tests performed and the accuracy of the recording and reporting system. 
 \item The area-bias: The visual impression is determined more by the colour and the geographical area of the individual countries than by the number of Covid cases. Since the countries of the world differ extremely in area, the visual assessment is distorted, especially in the case of neighbouring countries with similar numbers but different areas.
 \item Colour-scheme selection: Much research in visualisation is concerned with the appropriate choice of colour schemes, see \citep{brewer1997, color2021}. The choice of a continuous scale or a categorical scale, the choice of a scale that promotes the recognition of patterns or a scale that supports the filtering out of specific map details, influences the quality of choropleth maps.
 \end{enumerate}
@@ -210,9 +217,9 @@ On 11 March 2020, WHO declared the outbreak of the novel coronavirus disease (CO
 	\label{fig:choro1}
 \end{figure*}
 
-The issues with choropleth maps were highlighted in trade publications during the initial stages of the pandemic \citep{fieldMappingCoronavirusResponsibly}, but these publications did not penetrate the bureaucracy of public health officials suddenly tasked with data visualisation in realtime at scale. 
-Choropleth maps are quite commonly used by media companies and governmental organisations and it is easy to find good and bad examples of their usage.
-Proportional symbol maps, see Fig.~\ref{fig:propsymb} or graduated symbol maps place scaled symbols or diagrams directly on the input map, often on the centroid of the regions. 
+The issues with choropleth maps were highlighted in trade publications during the initial stages of the pandemic \citep{fieldMappingCoronavirusResponsibly}, but these publications did not penetrate the bureaucracy of public health officials suddenly tasked with data visualisation in real time at scale. 
+
+Proportional symbol maps, see \Cref{fig:propsymb} or graduated symbol maps place scaled symbols or diagrams directly on the input map, often on the centroid of the regions. 
 The symbol, most commonly a disk or a square, is scaled such that its area corresponds to the data value of the region. 
 Proportional symbol maps sacrifice familiar shapes and topological connectedness for equal visual weight\citep{gaoUsabilityValuebyalphaMaps2019}; while this representation avoids the area bias, proportional symbol maps are subject to under-estimation biases \citep{shimAnalysisMiddleSchool2008} that may be of particular concern when visualizing epidemic disease spread.
 In addition, the visual impression of any map based illustration depends on the projection chosen for the underlying map; the examples in \Cref{fig:choro1} and \Cref{fig:propsymb} have a western-centric bias.
@@ -264,7 +271,33 @@ We will examine these topics more closely in Section~\ref{sec:rankings}.
 % \end{figure}
 
 
-Throughout the pandemic, both in choropleth maps and time-series graphs, creators have had to grapple with scale. When scales automatically adjust, mental comparisons across time can become misleading, because e.g. the colour scale from yesterday does not mean the same thing as it did today, as the range has expanded and the colours have stayed the same. This problem is more noticeable in choropleths than in time-series charts, where we are more likely to expect and notice a scale change, but it is still a fundamental issue in many different types of charts. Some publications leaned into this by arranging their graphics to highlight the fact that cases were ``off the charts", as in \Cref{fig:jbm-tweet}, implicitly cuing readers that the situation was exceptional and worthy of their attention.
+Throughout the pandemic, both in choropleth maps and time-series graphs, creators have had to grapple with scale. When scales automatically adjust, mental comparisons across time can become misleading, because the colour scale from yesterday does not mean the same thing as it did today, as the range has expanded and the colours have stayed the same. 
+It is not that often that day-to-day design changes (or lack thereof) cause fundamental problems with the interpretation of data visualisation, but during the COVID 19 pandemic this situation was both extremely common and had real consequences: people would glance at the current COVID risk map and assume that "red" meant the same thing that it did yesterday, despite the fact that the underlying values had changed\citep{abiadColorDiagramWHOLebanon2020,rubelHeyUpshotNYTCurious2020,matthewsLessonFutzingData2020}. 
+One example of this issue over two months of NY Times graphics is shown in \Cref{fig:nyt-colors}; the overall color scheme used changes once, but the variable displayed changes (at least) 4 times over the course of a two month period. 
+
+\begin{figure}
+\centering
+\begin{subfigure}[c]{.25\textwidth}
+\includegraphics[width=\textwidth]{nyt-wayback-20200616}
+\caption{June 16, 2020}\label{fig:nyt-colors1}
+\end{subfigure}\hfill
+\begin{subfigure}[c]{.25\textwidth}
+\includegraphics[width=\textwidth]{nyt-wayback-20200716}
+\caption{July 16, 2020}\label{fig:nyt-colors2}
+\end{subfigure}\hfill
+\begin{subfigure}[c]{.25\textwidth}
+\includegraphics[width=\textwidth]{nyt-wayback-20200718}
+\caption{July 18, 2020}\label{fig:nyt-colors3}
+\end{subfigure}\hfill
+\begin{subfigure}[c]{.25\textwidth}
+\includegraphics[width=\textwidth]{nyt-wayback-20200814}
+\caption{August 1, 2020}\label{fig:nyt-colors4}
+\end{subfigure}\hfill
+\caption{A series of screenshots of the NY Times state-by-state display showing evolving color schemes and even metrics; initially, a discrete scale of two-week change in cases is shown; then, a similar color scheme is used with a different metric. Around July 17, the color scheme and variable shown changed to weekly cases per capita (from "fewer" to "more"), and by August 14, the variable shown changed back again ("falling" to "rising") while the color scheme stayed the same.}\label{fig:nyt-colors}
+\end{figure}
+
+This problem is more noticeable in choropleths and other charts which show case counts based on color scale alone than in time-series charts, where we are more likely to expect and notice a scale change, but it is still a fundamental issue across chart types and of particular concern when there is no natural upper bound on the variable displayed. 
+Some designers leaned into this by arranging their graphics to highlight the fact that cases were ``off the charts", as in \Cref{fig:jbm-tweet}, implicitly cuing readers that the situation was exceptional and worthy of their attention.
 
 \begin{figure}
 \includegraphics[width=.99\linewidth]{ft-off-charts}
@@ -272,7 +305,10 @@ Throughout the pandemic, both in choropleth maps and time-series graphs, creator
 \label{fig:jbm-tweet}
 \end{figure}
 
-Early in the pandemic, as case numbers grew exponentially without appropriate public health measures to restrain them, the scale problem for choropleth maps was particularly complex: over time either the colour mapping changes or the map becomes useless due to compression against the upper limits of the scale, as in \citet{panchadsaramIfWeAre2020}. Interestingly, media outlets and municipal dashboards were subject to criticism when the color scales changed in response to increasing case counts\citep{boeckDataVizDecisionmakingAction2020} as well as when the color scale did not change\citep{sandalowChiTribGraphicsPleaseUpdate2020}, illustrating the difficulty of designing visualizations amid competing constraints and a constantly evolving pandemic.
+Early in the pandemic, as case numbers grew exponentially without appropriate public health measures to restrain them, the scale problem for choropleth maps was particularly complex: over time either the colour mapping changes or the map becomes useless due to compression against the upper limits of the scale, as in \citet{panchadsaramIfWeAre2020}. 
+The magnitude of the problem also depends on whether the scale uses a set of bins (a discrete mapping to a continuous variable) or uses a continuous color mapping; in some cases, outlets switched between the two options over time or changed the underlying unit entirely. 
+Interestingly, media outlets and municipal dashboards were subject to criticism when the color scales changed in response to increasing case counts\citep{boeckDataVizDecisionmakingAction2020} as well as when the color scale did not change\citep{sandalowChiTribGraphicsPleaseUpdate2020}, illustrating the difficulty of designing visualizations amid competing constraints and a constantly evolving pandemic.
+
 
 % Is it worth discussing e.g. https://www.nytimes.com/interactive/2021/us/covid-risk-map.html that does not make this distinction and runs into the "boy who cried wolf" problem? When everything is always extremely high risk we just tend to tune things out. I don't want to distract from the overview, though... https://twitter.com/rypan/status/1282020934044401664 is a good example
 
@@ -553,7 +589,9 @@ Unfortunately, there are not a lot of good options for supporting forecasting de
 \section{Summary and discussion} \label{sec:summary}
 Throughout the pandemic (thus far), visual representations of data have been an integral part of scientific communication. While not always optimal, these graphics have attempted to provide meaningful context, to encourage individual and collective action, and to help individuals grapple with the scale of the pandemic in cases, deaths, vaccinations, and interventions. As in any developing situation, choices made at some points in the pandemic did not always persist - many news outlets refined their charts and approach to the design of graphics over the course of the pandemic. This evolution of graphical forms has provided us with an opportunity to evaluate what worked and did not -- and why -- in a context of broad general interest. 
 
-The visual narratives of the pandemic which have persisted over time are due in part to the rise of data journalism and interactive graphics platforms which ensure that every outlet has the ability to host engaging and visually appealing graphics; however, while these graphics are nice to look at, not all are equally functional or useful for communication purposes. As in any situation, good tools can be used and mis-used freely; we have seen charts and graphics used to perpetuate misinformation and misleading claims, even though it is far more common for charts and graphs to be used for good - to educate and inform the public.
+The visual narratives of the pandemic which have persisted over time are due in part to the rise of data journalism and interactive graphics platforms which ensure that every outlet has the ability to host engaging and visually appealing graphics; however, while these graphics are nice to look at, not all are equally functional or useful for communication purposes. As in any situation, good tools can be used and misused freely; we have seen charts and graphics used to perpetuate misinformation and misleading claims, even though it is far more common for charts and graphs to be used for good - to educate and inform the public.
+
+The Covid 19 pandemic has amply demonstrated that policies are only effectively implemented and followed by the population if they are accepted by a large majority of the population. To achieve this goal, it is essential that scientists, governments, the media, and citizens all effectively communicate in order to justify the appropriateness, usefulness and relevance of the measures. This is as true for guidelines about the use and creation of charts as it is for policies like masks and vaccines. % Making it a bit more explicit
 
 The pandemic and graphics used to show the ebb and flow of COVID cases highlight the challenges of data visualization in the modern era: even with numerous guidelines and standards for graphics, it is not straightforward to communicate about complex data, and creating charts which fully represent the intended message or messages is a challenge. It is essential that we continue to study how graphics are perceived and interpreted, supporting the guidelines and standards which exist with user studies that ground these rules in science. 
 
@@ -587,7 +625,7 @@ First ideas have been presented at DSSV 2020. We thank our colleagues and the ed
 %% -- Appendix (if any) --------------------------------------------------------
 %% - After the bibliography with page break.
 %% - With proper section titles and _not_ just "Appendix".
-
+% 
 % \newpage
 % 
 % \begin{appendix}
