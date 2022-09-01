@@ -277,19 +277,19 @@ One example of this issue over two months of NY Times graphics is shown in \Cref
 
 \begin{figure}
 \centering
-\begin{subfigure}[c]{.25\textwidth}
+\begin{subfigure}[t]{.25\textwidth}
 \includegraphics[width=\textwidth]{nyt-wayback-20200616}
 \caption{June 16, 2020}\label{fig:nyt-colors1}
 \end{subfigure}\hfill
-\begin{subfigure}[c]{.25\textwidth}
+\begin{subfigure}[t]{.25\textwidth}
 \includegraphics[width=\textwidth]{nyt-wayback-20200716}
 \caption{July 16, 2020}\label{fig:nyt-colors2}
 \end{subfigure}\hfill
-\begin{subfigure}[c]{.25\textwidth}
+\begin{subfigure}[t]{.25\textwidth}
 \includegraphics[width=\textwidth]{nyt-wayback-20200718}
 \caption{July 18, 2020}\label{fig:nyt-colors3}
 \end{subfigure}\hfill
-\begin{subfigure}[c]{.25\textwidth}
+\begin{subfigure}[t]{.25\textwidth}
 \includegraphics[width=\textwidth]{nyt-wayback-20200814}
 \caption{August 1, 2020}\label{fig:nyt-colors4}
 \end{subfigure}\hfill
