@@ -16,7 +16,7 @@ All in all, I think it largely succeeds in these aims and would be a suitable an
 :::
 
 
-Specific reviewer comments are addressed below, here, we address additional discussions brought up by the AE in response to the reviewers' comments.
+**Authors' response:** Specific reviewer comments are addressed below, here, we address additional discussions brought up by the AE in response to the reviewers' comments.
 
 ::: callout
 ## Reviewer 2 - Principles
@@ -26,15 +26,15 @@ between the design of a graphic and the capabilities of the intended audience in
 graphic display is successful for its intended purpose. This is more important than simple design rules.
 :::
 
-We have added a short paragraph addressing this in the data communication subsection of the introduction, and used the opportunity to state that we have primarily focused on charts intended for mass consumption rather than experts in public health or epidemiology.
+**Authors' response:** We have added a short paragraph addressing this in the data communication subsection of the introduction, and used the opportunity to state that we have primarily focused on charts intended for mass consumption rather than experts in public health or epidemiology.
 
 ::: callout
-## Other comments: Proportional symbol maps
+### Other comments: Proportional symbol maps
 
 I was very surprised to see no mention or illustration of anamorphic maps or cartograms, where the area of each geographical unit is transformed to represent the count (cases/deaths). I strongly suggest including something on this.
 :::
 
-We have added a cartogram to the discussion of proportional symbol maps and choropleths. Thank you for catching an obvious omission on our part.
+**Authors' response:** We have added a cartogram to the discussion of proportional symbol maps and choropleths. Thank you for catching an obvious omission on our part.
 
 ::: callout
 ### Other comments: Color scheme obstructions
@@ -43,7 +43,7 @@ Color scheme is mentioned only in regard to Fig 6, but there are other examples 
 
 :::
 
-We have added additional analysis of color where we feel it is useful; Figure 12 is one case where we chose not to mention color in part because I (Susan) can't tell if it's effective or not - I'm colorblind, and while I have trouble with streamgraphs in general, that is particularly true if color is actually meaningful. 
+**Authors' response:** We have added additional analysis of color where we feel it is useful; Figure 12 is one case where we chose not to mention color in part because one of the authors (Susan) can't tell if it's effective or not - she is colorblind, and while we have trouble with streamgraphs in general, that is particularly true if color is actually meaningful. 
 
 ::: callout
 ### Other comments: Uncertainty
@@ -54,7 +54,7 @@ understanding their uncertainty is also a topic that could be mentioned or discu
 
 :::
 
-We wholeheartedly agree - uncertainty should be mentioned in the introduction, though I can't think of any specific examples of addressing the uncertainty through visualization (as opposed to footnotes about data quality) in mainstream graphics which were circulated at the time. Still, that is a rather glaring omission from both our discussion and the collection of graphs we've accumulated as interesting.
+**Authors' response:** We wholeheartedly agree - uncertainty should be mentioned in the introduction, though I can't think of any specific examples of addressing the uncertainty through visualization (as opposed to footnotes about data quality) in mainstream graphics which were circulated at the time. Still, that is a rather glaring omission from both our discussion and the collection of graphs we've accumulated as interesting.
 
 ::: callout
 ### Other comments: Temporal narrative
@@ -65,7 +65,7 @@ animation or an interactive slider.
 
 :::
 
-We've added a moving bubble chart - again, this is an obvious omission. Thank you for bringing it to our attention. Interestingly, it was somewhat difficult to find a chart like this in a mainstream media outlet when searching through retrospectively. Part of that may be the fact that the web isn't great at keeping archival content, and many of these dashboards have been overwritten through successive modification. I suspect another part, however, is that moving bubble charts require a lot of effort to read and understand, and possibly were more common on social media and in the data vis community writ large than in media intended for the general public.
+**Authors' response:** We've added a moving bubble chart - again, this is an obvious omission. Thank you for bringing it to our attention. Interestingly, it was somewhat difficult to find a chart like this in a mainstream media outlet when searching through retrospectively. Part of that may be the fact that the web isn't great at keeping archival content, and many of these dashboards have been overwritten through successive modification. I suspect another part, however, is that moving bubble charts require a lot of effort to read and understand, and possibly were more common on social media and in the data vis community writ large than in media intended for the general public.
 
 ::: callout
 ### Other comments: standardization
@@ -79,11 +79,11 @@ probably other examples.
 
 :::
 
-There may be other examples, but this is a good one. We've added a comment to that effect in the discussion of time series data, but we also mention standardization w.r.t. area and population in the choropleth/cartogram section. While the topic probably deserves a more thorough treatment, it's not easy to slide it in and maintain the current structure of the paper, so we hope that this suffices.
+**Authors' response:** There may be other examples, but this is a good one. We've added a comment to that effect in the discussion of time series data, but we also mention standardization w.r.t. area and population in the choropleth/cartogram section. While the topic probably deserves a more thorough treatment, it's not easy to slide it in and maintain the current structure of the paper, so we hope that this suffices.
 
 
 
-## Reviewer 1
+# Reviewer 1
 
 ::: callout
 ### How was the sample of publications selected? Under what criteria?    
@@ -91,7 +91,7 @@ There may be other examples, but this is a good one. We've added a comment to th
 As it stands, the selection seems arbitrary and very limited. Why the Financial Times and The New York Times and not others? Why not analyzing visualizations from non-Western countries? If the authors want to talk about a “global narrative”, the selection of graphics should also be global. A comparative cross-cultural study would be pretty productive, as it might reveal similarities and differences of graphics from different regions.
 :::
 
-The authors are from the United States and Germany; while we participated in many discussions on global social media platforms such as Twitter, we do not have the global perspective (or even facility with sufficient languages) to undertake a review of a global sample of media relating to COVID. We have added a section which explicitly states how charts were selected and what our individual biases are with respect to geography and culture. 
+**Authors' response:** The authors are from the United States and Germany; while we participated in many discussions on global social media platforms such as Twitter, we do not have the global perspective (or even facility with sufficient languages) to undertake a review of a global sample of media relating to COVID. We have added a section which explicitly states how charts were selected and what our individual biases are with respect to geography and culture. 
 
 
 ::: callout
@@ -107,7 +107,7 @@ This would need to be extended, though, and more clearly explained. Making a vis
 
 :::
 
-We have modified the principles section to remove the reference to Tufte and the data/ink ratio. We have slightly reorganized the introduction section to add subsections, and have added an additional paragraph which discusses the series of choices made in the process of designing a data visualization. While the general guidelines for making these choices are somewhat outside the scope of this paper, as this is an article, and not a book, and proper treatment of these decisions in a broader context would require at least a book, we hope that highlighting the more general context surrounding the creation of data visualizations and explicitly defining the scope for this article provides some additional clarity.
+**Authors' response:** We have modified the principles section to remove the reference to Tufte and the data/ink ratio. We have slightly reorganized the introduction section to add subsections, and have added an additional paragraph which discusses the series of choices made in the process of designing a data visualization. While the general guidelines for making these choices are somewhat outside the scope of this paper, as this is an article, and not a book, and proper treatment of these decisions in a broader context would require at least a book, we hope that highlighting the more general context surrounding the creation of data visualizations and explicitly defining the scope for this article provides some additional clarity.
 
 
 ::: callout
@@ -119,10 +119,10 @@ The authors also make too many assumptions about how a graphic will be interpret
 
 :::
 
-While the editor has cautioned us not to double the length of the paper, where possible we have attempted to address some obvious shortcomings in our initial discussion without unduly increasing the paper's length. This paper is in part a result of discussing COVID graphics in several groups and seminars with data visualization professionals and also with laypeople; as a result, while we cannot directly cite a source saying that a specific graphic is simple and intuitive, we can directly assess the visual complexity of the chart and we can distill down the series of discussions we've had about these topics over the course of the pandemic to arrive at what we hope are fairly useful conclusions. In an attempt to be a bit more precise, however, where we could find relevant discussions on social media, we have included citations of those discussions to provide some support for claims that we have made summarizing the views of others.
+**Authors' response:** While the editor has cautioned us not to double the length of the paper, where possible we have attempted to address some obvious shortcomings in our initial discussion without unduly increasing the paper's length. This paper is in part a result of discussing COVID graphics in several groups and seminars with data visualization professionals and also with laypeople; as a result, while we cannot directly cite a source saying that a specific graphic is simple and intuitive, we can directly assess the visual complexity of the chart and we can distill down the series of discussions we've had about these topics over the course of the pandemic to arrive at what we hope are fairly useful conclusions. In an attempt to be a bit more precise, however, where we could find relevant discussions on social media, we have included citations of those discussions to provide some support for claims that we have made summarizing the views of others.
 
 
-## Reviewer 2
+# Reviewer 2
 
 ::: callout
 ### Phrasing
@@ -130,7 +130,7 @@ While the editor has cautioned us not to double the length of the paper, where p
 This is clearly an article by researchers for whom English is likely a second language. While fluent, the wording is often obtuse and clunky. I have made a number of changes in the text to show where it might be improved.
 :::
 
-We appreciate the edits. We have addressed many of the stylistic suggestions where appropriate. In other cases, we have modified the paper in ways that rendered the suggested edits moot, and we hope the reviewer will appreciate the final result in any case.
+**Authors' response:** We appreciate the edits. We have addressed many of the stylistic suggestions where appropriate. In other cases, we have modified the paper in ways that rendered the suggested edits moot, and we hope the reviewer will appreciate the final result in any case.
 
 ::: callout
 ### Organization
@@ -145,4 +145,4 @@ And in the discussion ... what have we learned? Well, there are static and dynam
 
 :::
 
-The organization of this paper is certainly not the same as that which is proposed, in part because we have taken a narrative view that explores the different communication narratives of visualizations during the pandemic. Because we focus on the narratives and look at the chart types employed in service of those narratives, organization necessarily deviates from a straightforward analysis of each chart type in sequence, but this is by design.
+**Authors' response:** The organization of this paper is certainly not the same as that which is proposed, in part because we have taken a narrative view that explores the different communication narratives of visualizations during the pandemic. Because we focus on the narratives and look at the chart types employed in service of those narratives, organization necessarily deviates from a straightforward analysis of each chart type in sequence, but this is by design.

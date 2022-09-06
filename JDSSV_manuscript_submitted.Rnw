@@ -624,7 +624,7 @@ Graphics included in this paper not sourced from media outlets were created usin
 
 \section*{Acknowledgments}
 
-First ideas have been presented at DSSV 2020. We thank our colleagues and the editors for valuable feedback and encouragement to complete this manuscript.
+First ideas have been presented at DSSV 2020. We thank our colleagues, the reviewers, and the editors for valuable feedback and encouragement to complete and revise this manuscript.
 
 %% -- Bibliography -------------------------------------------------------------
 %% - References need to be provided in a .bib BibTeX database.
