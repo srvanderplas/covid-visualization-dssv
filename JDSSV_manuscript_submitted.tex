@@ -85,13 +85,13 @@
 %% - \title{} in title case
 %% - \Plaintitle{} without LaTeX markup (if any)
 %% - \Shorttitle{} with LaTeX markup (if any), used as running title
-\title{Visual narratives of the Covid-19 pandemic}
-\Plaintitle{Visual narratives of the Covid-19 pandemic}
-\Shorttitle{Visual narratives of Covid-19}
+\title{Visual narratives of the COVID-19 pandemic}
+\Plaintitle{Visual narratives of the COVID-19 pandemic}
+\Shorttitle{Visual narratives of COVID-19}
 
 %% - \Abstract{} almost as usual
 \Abstract{
-  Covid-19 has sparked a worldwide interest in understanding the dynamic evolution of a pandemic and tracking the effectiveness of preventive measures and rules. For this reason, numerous media and research groups have produced comprehensive data visualisations to illustrate the relevant trends and figures. In this paper, we will look at a selection of Covid 19 data visualisations to evaluate and discuss the currently established visualisation tools in terms of their ability to provide a communication channel both within the data science team and between data analysts, domain experts and a general interested audience. Although there is no set catalogue of evaluation criteria for data visualisations, we will try to give an overview of the different core aspects of visualisation evaluation and their competing principles.
+  COVID-19 has sparked a worldwide interest in understanding the dynamic evolution of a pandemic and tracking the effectiveness of preventive measures and rules. For this reason, numerous media and research groups have produced comprehensive data visualisations to illustrate the relevant trends and figures. In this paper, we will look at a selection of COVID 19 data visualisations to evaluate and discuss the currently established visualisation tools in terms of their ability to provide a communication channel both within the data science team and between data analysts, domain experts and a general interested audience. Although there is no set catalogue of evaluation criteria for data visualisations, we will try to give an overview of the different core aspects of visualisation evaluation and their competing principles.
   }
 
 %% - \Keywords{} with LaTeX markup, at least one required
@@ -130,12 +130,12 @@
 
 \section{Introduction}
 
-Over the past two years, several waves of Covid-19 infections caused by different mutations of the SARS-CoV-2 virus have swept across the globe, claiming lives, stressing healthcare systems, and changing many different facets of our day-to-day experience. According to the WHO, almost 600 million confirmed cases and over 6.45 million deaths have been reported as of late August 2022 \footnote{\url{https://www.who.int/docs/default-source/coronaviruse/who_mou_30_august-2022.pdf}}. The pandemic has generated enormous interest in epidemiological data, its analysis and visualisation. From the beginning of the pandemic, data on the number of infections and covid-related deaths has been published daily and made available to the public. Media, politicians and individuals use this data to build their narratives about the pandemic, discuss its evolution, justify the measures taken and discuss different prevention strategies against the spread of the virus. %So there are several goals to be achieved by visualising Covid-19 data.
+Over the past two years, several waves of COVID-19 infections caused by different mutations of the SARS-CoV-2 virus have swept across the globe, claiming lives, stressing healthcare systems, and changing many different facets of our day-to-day experience. According to the WHO, almost 600 million confirmed cases and over 6.45 million deaths have been reported as of late August 2022 \footnote{\url{https://www.who.int/docs/default-source/coronaviruse/who_mou_30_august-2022.pdf}}. The pandemic has generated enormous interest in epidemiological data, its analysis and visualisation. From the beginning of the pandemic, data on the number of infections and COVID-related deaths has been published daily and made available to the public. Media, politicians and individuals use this data to build their narratives about the pandemic, discuss its evolution, justify the measures taken and discuss different prevention strategies against the spread of the virus. %So there are several goals to be achieved by visualising COVID-19 data.
 These goals and their priorities were adapted as dynamically as the virus mutated and the pandemic changed pace, but as with any other data visualisation the general principles remain the same: ensuring clear understanding by organising graphics in such a way that the story of the data is told most effectively.
 
 \subsection{Data Journalism and the Media}
 
-In recent decades, many media organisations have established data teams that received unprecedented attention and wide-ranging opportunities during the pandemic to showcase their skills and abilities, not only in visualising data, but also in explaining their data collection and data analysis strategies and methods. COVID-19 allowed these data journalists to prove their utility in newsrooms, presenting data in digestible form to the public in news articles but also Data journalism will certainly be one of the beneficiaries of the Covid-19 pandemic and it has become an important part of news publishing, with COVID-19 delivering many excellent applications, often presented in an interactive visual format on the web, such as dashboards\citep{kochWelcomeRevolutionCOVID192021}.
+In recent decades, many media organisations have established data teams that received unprecedented attention and wide-ranging opportunities during the pandemic to showcase their skills and abilities, not only in visualising data, but also in explaining their data collection and data analysis strategies and methods. COVID-19 allowed these data journalists to prove their utility in newsrooms, presenting data in digestible form to the public in news articles but also Data journalism will certainly be one of the beneficiaries of the COVID-19 pandemic and it has become an important part of news publishing, with COVID-19 delivering many excellent applications, often presented in an interactive visual format on the web, such as dashboards\citep{kochWelcomeRevolutionCOVID192021}.
 
 %shall we include a list of newspapers/media outlets that we aim at covering?
 
@@ -185,14 +185,14 @@ Choropleth maps are quite commonly used by media companies and governmental orga
 While choropleth maps based on raw numbers of cases might look convincing and are an obvious choice under the circumstances, the use of these charts ignores a number of well-know caveats for statistical reporting and visualisation:
 
 \begin{enumerate}
-\item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Viewers tend to integrate similarly coloured areas of the map unconsciously, and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of Covid-19 cases are strongly influenced by the population size of the country as well as by the number of tests performed and the accuracy of the recording and reporting system. 
-\item The area-bias: The visual impression is determined more by the colour and the geographical area of the individual countries than by the number of Covid cases. Since the countries of the world differ extremely in area, the visual assessment is distorted, especially in the case of neighbouring countries with similar numbers but different areas.
+\item Absolute value unsuitability: As explained in \citep{monmonier2005, slocum2008, speckmann2010} among others, choropleth maps are fundamentally unsuitable for the representation of absolute numbers. Viewers tend to integrate similarly coloured areas of the map unconsciously, and perceive choropleths as representations of density. They also do not help to convey the desired message as the absolute numbers of COVID-19 cases are strongly influenced by the population size of the country as well as by the number of tests performed and the accuracy of the recording and reporting system. 
+\item The area-bias: The visual impression is determined more by the colour and the geographical area of the individual countries than by the number of COVID cases. Since the countries of the world differ extremely in area, the visual assessment is distorted, especially in the case of neighbouring countries with similar numbers but different areas.
 \item Colour-scheme selection: Much research in visualisation is concerned with the appropriate choice of colour schemes, see \citep{brewer1997, color2021}. The choice of a continuous scale or a categorical scale, the choice of a scale that promotes the recognition of patterns or a scale that supports the filtering out of specific map details, influences the quality of choropleth maps.
 \end{enumerate}
 
 \begin{figure*}
 	\includegraphics[width = 0.98\textwidth]{Figures_Web/who_totalcases_choro.png}
-	\caption{Choropleth map of the Covid-19 cases world-wide by country \citep{WHOCoronavirusCOVID19}.}
+	\caption{Choropleth map of the COVID-19 cases world-wide by country \citep{WHOCoronavirusCOVID19}.}
 	\label{fig:choro1}
 \end{figure*}
 
@@ -206,7 +206,7 @@ In addition, the visual impression of any map based illustration depends on the 
 
 \begin{figure*}
 	\includegraphics[width = 0.98\textwidth]{Figures_Web/wp_totaldeaths_propsymb.png}
-	\caption{Proportional symbol map showing the cumulated reported Covid-19 related deaths adjusted for population world-wide by country \citep{alcantaraMappingWorldwideSpread}.}
+	\caption{Proportional symbol map showing the cumulated reported COVID-19 related deaths adjusted for population world-wide by country \citep{alcantaraMappingWorldwideSpread}.}
 	\label{fig:propsymb}
 \end{figure*}
 
@@ -214,7 +214,7 @@ Another modification of the standard choropleth to address the area-bias problem
 A spatial dot density map might have allowed for analysis of data across geographic boundaries, but this approach was not commonly used to show global case counts, though it was highlighted as a useful option at the national level \citep{fieldMappingCoronavirusResponsibly}, as shown in \Cref{fig:china-dot-map}.
 
 The narrative of the global perspective seems to be highly limited to the aspect of a pandemic affecting the entire globe: none of the above viusalisations intends to provide a deeper insight into the spatial distribution of the phenomenon, neither within the administratively motivated spatial borders nor across them. 
-The use of maps to assess the global pandemic more often focuses on the comparative aspects: how are we doing as opposed to our neighbors? Which strategy to fight Covid-19 is better? 
+The use of maps to assess the global pandemic more often focuses on the comparative aspects: how are we doing as opposed to our neighbors? Which strategy to fight COVID-19 is better? 
 We will examine these topics more closely in \Cref{sec:rankings}.
 
 
@@ -222,8 +222,8 @@ We will examine these topics more closely in \Cref{sec:rankings}.
 \centering
 \begin{subfigure}[c]{\textwidth}
 \centering
-\includegraphics[width=.65\textwidth]{covid-tracking-hex-cartogram}
-\caption{Hexagonal Cartogram of Covid-19 cases in the United States by state \citep{StateCases1M2021}.}\label{fig:hex-cartogram}
+\includegraphics[width=.65\textwidth]{COVID-tracking-hex-cartogram}
+\caption{Hexagonal Cartogram of COVID-19 cases in the United States by state \citep{StateCases1M2021}.}\label{fig:hex-cartogram}
 \end{subfigure}
 
 \begin{subfigure}[c]{\textwidth}
@@ -232,18 +232,18 @@ We will examine these topics more closely in \Cref{sec:rankings}.
 \caption{A dot-density map of COVID cases in China \citep{fieldMappingCoronavirusResponsibly}.}\label{fig:china-dot-map}
 \end{subfigure}
 % \begin{subfigure}[t]{.45\textwidth}
-% \includegraphics[width=\textwidth]{nyt-covid-scaled-choro}
-% \caption{Choropleth Map of covid cases per country, scaled by population. Source: New York Times \url{https://www.nytimes.com/interactive/2021/world/covid-cases.html}.}\label{fig:scaled-choro}
+% \includegraphics[width=\textwidth]{nyt-COVID-scaled-choro}
+% \caption{Choropleth Map of COVID cases per country, scaled by population. Source: New York Times \url{https://www.nytimes.com/interactive/2021/world/COVID-cases.html}.}\label{fig:scaled-choro}
 % \end{subfigure}
 \caption{Modifications of choropleth maps which attempt to address the area bias of choropleths in different ways. Both methods are applied at the national scale rather than at global scale because of limitations with the visual form or data quality.}
 \end{figure}
 % 
 % \begin{minipage}{\linewidth}
 % \begin{minipage}{.7\linewidth}
-% \includegraphics[width=\textwidth]{covid-tracking-hex-cartogram}
+% \includegraphics[width=\textwidth]{COVID-tracking-hex-cartogram}
 % \end{minipage}
 % \begin{minipage}{.29\linewidth}
-% \captionof{figure}{Hexagonal Cartogram of Covid-19 cases in the United States by state. The COVID Tracking Project \url{https://covidtracking.com/data/charts/us-daily-positive-cases}.}\label{fig:hex-cartogram}
+% \captionof{figure}{Hexagonal Cartogram of COVID-19 cases in the United States by state. The COVID Tracking Project \url{https://COVIDtracking.com/data/charts/us-daily-positive-cases}.}\label{fig:hex-cartogram}
 % \end{minipage}
 % \end{minipage}
 % 
@@ -262,12 +262,12 @@ We will examine these topics more closely in \Cref{sec:rankings}.
 % \begin{figure}
 % \centering
 % \begin{subfigure}[t]{.45\textwidth}
-% \includegraphics[width=\textwidth]{covid-tracking-hex-cartogram}
-% \caption{Hexagonal Cartogram of Covid-19 cases in the United States by state, per million people. This somewhat mitigates the area bias issue, but is still subject to other perceptual biases. Source: The COVID Tracking Project at The Atlantic \url{https://covidtracking.com/data/charts/us-daily-positive-cases}.}\label{fig:hex-cartogram}
+% \includegraphics[width=\textwidth]{COVID-tracking-hex-cartogram}
+% \caption{Hexagonal Cartogram of COVID-19 cases in the United States by state, per million people. This somewhat mitigates the area bias issue, but is still subject to other perceptual biases. Source: The COVID Tracking Project at The Atlantic \url{https://COVIDtracking.com/data/charts/us-daily-positive-cases}.}\label{fig:hex-cartogram}
 % \end{subfigure}\hfill
 % \begin{subfigure}[t]{.45\textwidth}
-% \includegraphics[width=\textwidth]{nyt-covid-scaled-choro}
-% \caption{Choropleth Map of covid cases per country, scaled by population. Source: New York Times \url{https://www.nytimes.com/interactive/2021/world/covid-cases.html}.}\label{fig:scaled-choro}
+% \includegraphics[width=\textwidth]{nyt-COVID-scaled-choro}
+% \caption{Choropleth Map of COVID cases per country, scaled by population. Source: New York Times \url{https://www.nytimes.com/interactive/2021/world/COVID-cases.html}.}\label{fig:scaled-choro}
 % \end{subfigure}
 % \caption{Modifications of choropleth maps which attempt to address the area bias of choropleths in different ways.}
 % \end{figure}
@@ -292,7 +292,7 @@ The magnitude of the problem also depends on whether the scale uses a set of bin
 Interestingly, media outlets and municipal dashboards were subject to criticism when the color scales changed in response to increasing case counts\citep{boeckDataVizDecisionmakingAction2020} as well as when the color scale did not change\citep{sandalowChiTribGraphicsPleaseUpdate2020}, illustrating the difficulty of designing visualizations amid competing constraints and a constantly evolving pandemic.
 
 
-% Is it worth discussing e.g. https://www.nytimes.com/interactive/2021/us/covid-risk-map.html that does not make this distinction and runs into the "boy who cried wolf" problem? When everything is always extremely high risk we just tend to tune things out. I don't want to distract from the overview, though... https://twitter.com/rypan/status/1282020934044401664 is a good example
+% Is it worth discussing e.g. https://www.nytimes.com/interactive/2021/us/COVID-risk-map.html that does not make this distinction and runs into the "boy who cried wolf" problem? When everything is always extremely high risk we just tend to tune things out. I don't want to distract from the overview, though... https://twitter.com/rypan/status/1282020934044401664 is a good example
 
 
 
@@ -301,22 +301,22 @@ Interestingly, media outlets and municipal dashboards were subject to criticism 
 % Line plots, frequency domain, NY times tile plots w/ cases represented in colour intensity
 
 Visualisations are typically created for a specific purpose, and during a pandemic it is particularly critical to show the evolution of the situation over time, as there are new developments on a daily basis. 
-Typically, this means that cases, hospitalizations, and/or deaths are plotted on the y-axis, with date shown on the x-axis, as in \Cref{fig:jbm-tweet} and \Cref{fig:wapo-covid-time-series}. 
+Typically, this means that cases, hospitalizations, and/or deaths are plotted on the y-axis, with date shown on the x-axis, as in \Cref{fig:jbm-tweet} and \Cref{fig:wapo-COVID-time-series}. 
 This not only allows individuals to compare the present to past case counts, but also allows for forecasting and prediction of the future based on the current state. 
 Time series plots are the most natural choice for these goals, and over the course of the pandemic, many different attempts have been made to show time series information using different graphical forms. 
 
 \begin{figure}
 \centering
-\includegraphics[width=.99\linewidth]{wapo-covid-monitoring}
+\includegraphics[width=.99\linewidth]{wapo-COVID-monitoring}
 \caption{COVID monitoring summary charts on the Washington Post's Coronavirus page \citep{Coronavirus2022}.}
-\label{fig:wapo-covid-time-series}
+\label{fig:wapo-COVID-time-series}
 \end{figure}
 
-The most obvious time-series plot is also the most common: plotting cases against date, often with a 7 or 14-day smooth to handle periodicity in case reporting due to the work week, as shown in \Cref{fig:wapo-covid-time-series}. This allows for individuals to assess the current situation and easily compare the current number of cases to past times for which the individual has a direct reference for what to expect in impact to daily life. Often, as in \Cref{fig:wapo-covid-time-series}, these time series show multiple variables: cases, deaths, and hospitalizations (and sometimes vaccinations) to provide a more comprehensive view of the situation; this is particularly useful as there has been some decoupling of case numbers and hospitalizations/deaths with the emergence of effective vaccinations and strains which are more contagious but potentially also less severe. Many outlets also provide additional charts designed to provide some immediate context to readers, as shown in \Cref{fig:wapo-context}. 
+The most obvious time-series plot is also the most common: plotting cases against date, often with a 7 or 14-day smooth to handle periodicity in case reporting due to the work week, as shown in \Cref{fig:wapo-COVID-time-series}. This allows for individuals to assess the current situation and easily compare the current number of cases to past times for which the individual has a direct reference for what to expect in impact to daily life. Often, as in \Cref{fig:wapo-COVID-time-series}, these time series show multiple variables: cases, deaths, and hospitalizations (and sometimes vaccinations) to provide a more comprehensive view of the situation; this is particularly useful as there has been some decoupling of case numbers and hospitalizations/deaths with the emergence of effective vaccinations and strains which are more contagious but potentially also less severe. Many outlets also provide additional charts designed to provide some immediate context to readers, as shown in \Cref{fig:wapo-context}. 
 
 \begin{figure}
 \centering
-\includegraphics[width=.5\linewidth]{wapo-covid-context}
+\includegraphics[width=.5\linewidth]{wapo-COVID-context}
 \caption{Some outlets provide contextual information to assist readers with interpreting time-series plots \citep{CoronavirusCasesTracking2022}.}
 \label{fig:wapo-context}
 \end{figure}
@@ -374,16 +374,16 @@ One unique time-series plot created a representation of the case counts in the f
 \label{fig:freq-domain}
 \end{figure}
 
-There are many different ways that designers can use time-series data to provide additional contextual information and facilitate comparisons. \Cref{fig:ft-waves} shows covid cases, positivity rate, and hospital admissions from South Africa's Gauteng province, which was one of the first areas to experience a large wave of the Omicron variant. This chart provides context for the Omicron wave, showing that while infections are occurring at a much faster rate than in previous waves, hospital admissions seem to be approximately following previous trends. In addition, it is clear that the chart is highlighting the Omicron variant from the colour selection: the red used to show the Omicron numbers is a sharp contrast from the green and blue shades used to show the first three waves of the pandemic. Notably, even though red and green in combination are usually to be avoided for the sake of colourblind viewers, the shades of blue/green variants which are chosen are light enough that the red stands out even to someone with colour vision deficiency.
+There are many different ways that designers can use time-series data to provide additional contextual information and facilitate comparisons. \Cref{fig:ft-waves} shows COVID cases, positivity rate, and hospital admissions from South Africa's Gauteng province, which was one of the first areas to experience a large wave of the Omicron variant. This chart provides context for the Omicron wave, showing that while infections are occurring at a much faster rate than in previous waves, hospital admissions seem to be approximately following previous trends. In addition, it is clear that the chart is highlighting the Omicron variant from the colour selection: the red used to show the Omicron numbers is a sharp contrast from the green and blue shades used to show the first three waves of the pandemic. Notably, even though red and green in combination are usually to be avoided for the sake of colourblind viewers, the shades of blue/green variants which are chosen are light enough that the red stands out even to someone with colour vision deficiency.
 
 \begin{figure}\centering
 \includegraphics[width=\linewidth]{ft-waves}\\
 \includegraphics[width=\linewidth]{ft-waves-linear}
-\caption{Covid Cases, positivity rate, and hospital admissions from South Africa's Gauteng province, on a log scale (top) and linear scale (bottom). Successive waves are overlaid, showing that the increase in cases due to the Omicron variant was sharper than any previously measured increase, while hospitalizations were much more comparable to previous waves \citep{burn-murdoch_new_2021-1}.}
+\caption{COVID Cases, positivity rate, and hospital admissions from South Africa's Gauteng province, on a log scale (top) and linear scale (bottom). Successive waves are overlaid, showing that the increase in cases due to the Omicron variant was sharper than any previously measured increase, while hospitalizations were much more comparable to previous waves \citep{burn-murdoch_new_2021-1}.}
 \label{fig:ft-waves}
 \end{figure}
 
-While traditionally, time-series information has been limited to charts with time on a linear x-axis, many charts manipulated time to highlight different aspects of the pandemic. In some cases, these modifications provided large amounts of utility for a relatively small increase in complexity: for example, John Burn-Murdoch's decision to index Financial Times covid graphs to the days since the $N$th case or death. This decision is a small modification of the basic time-series plot, but has important consequences in the chart's readability as well as the visual emphasis for users: the graphs in the Financial Times were designed to emphasize "... that there's an inevitability about how coronavirus spreads... even if there are only a few cases in your country today, based on all the data we have, you will end up going along that path, the same path that the likes of Italy and Spain have been on so tragically."\citep{hannenCoronavirusTrajectoryTracker2020a} By placing all countries on an even footing divorced from the temporal randomness of when the first case appeared, the viewer can effectively compare the effect of government policies and other interventions on the trajectory over time\citep{burn-murdochAllCountriesDeath2020,burn-murdochLatestCaseTrajectories2020}. 
+While traditionally, time-series information has been limited to charts with time on a linear x-axis, many charts manipulated time to highlight different aspects of the pandemic. In some cases, these modifications provided large amounts of utility for a relatively small increase in complexity: for example, John Burn-Murdoch's decision to index Financial Times COVID graphs to the days since the $N$th case or death. This decision is a small modification of the basic time-series plot, but has important consequences in the chart's readability as well as the visual emphasis for users: the graphs in the Financial Times were designed to emphasize "... that there's an inevitability about how coronavirus spreads... even if there are only a few cases in your country today, based on all the data we have, you will end up going along that path, the same path that the likes of Italy and Spain have been on so tragically."\citep{hannenCoronavirusTrajectoryTracker2020a} By placing all countries on an even footing divorced from the temporal randomness of when the first case appeared, the viewer can effectively compare the effect of government policies and other interventions on the trajectory over time\citep{burn-murdochAllCountriesDeath2020,burn-murdochLatestCaseTrajectories2020}. 
 
 
 The New York Times intentionally violated typical design guidelines in a controversial chart; the x-axis was wrapped around an Archimedean spiral to provide a sense of periodicity in the year-by-year evolution of case counts, as shown in \Cref{fig:nyt-spiral}. The original form of this chart is prone to the line-width illusion \citep{vanderplasSignsSineIllusion2015}, in addition to the well-known problems with polar charts \citep{hofmannGraphicalTestsPower2012,waldnerComparisonRadialLinear2020}. A re-envisioned version created by Sourya Shrestha, aligns counts on the outside of the spiral, and displays them as radial lines, mitigating some of the issues with the line-width illusion by directly showing each line as its own entity, facilitating direct comparisons. 
@@ -392,7 +392,7 @@ In addition, the re-envisioned chart includes a reference line at 100K cases/day
 
 \begin{figure}\centering
 \includegraphics[width=.45\linewidth]{nyt-spiral}\hfill\includegraphics[width=.45\linewidth]{spiral-rework}
-\caption{Covid cases in the United States, 2020-2022. The original graph from the New York Times is on the left \citep{shamanOpinionHereWhen2022}, and a reenvisioned version which is more perceptually friendly is on the right \citep{shresthaCovidSpiral2022}.}
+\caption{COVID cases in the United States, 2020-2022. The original graph from the New York Times is on the left \citep{shamanOpinionHereWhen2022}, and a reenvisioned version which is more perceptually friendly is on the right \citep{shresthaCovidSpiral2022}.}
 \label{fig:nyt-spiral}
 \end{figure}
 
@@ -401,17 +401,17 @@ Other designers used the capabilities of web graphics to show the time component
 \begin{figure}
 \centering
 \includegraphics[width=.8\linewidth]{Figures_Web/Bar-chart-race-screenshot}
-\caption{A screenshot from Stats on Clock's bar chart race showing counts of covid cases over time throughout the pandemic \citep{clockCoronavirusCasesBar2022}.}\label{fig:barchart-race}
+\caption{A screenshot from Stats on Clock's bar chart race showing counts of COVID cases over time throughout the pandemic \citep{clockCoronavirusCasesBar2022}.}\label{fig:barchart-race}
 \end{figure}
 
 As people grappled with the scale of the pandemic and the lives lost as a result, a different set of data displays attempted to provide context to this loss over time. In the New York times, this took the form of a story showing the accumulation of the first 100,000 deaths due to COVID in the US, with occasional short quotes from individuals' obituaries to humanize the names\citep{barryRemembering1000002020}. While this is not a typical time-series chart, as the user scrolled through the page the pace of the names increases, showing the scale of the pandemic in a visceral way. A less sentimental dot-density timeline by the New York Times about 9 months later chronicled the nation reaching 450,000 deaths; the difference between the two visualizations brings to mind the quote oft attributed to Stalin: "One death is a tragedy; a million deaths is a statistic" \citep{investigatorSingleDeathTragedy2016}.
 
-A slightly different approach by the BBC's Visual and Data Journalism team, shown in \Cref{fig:bbc-flower}, displayed the Covid cases and deaths as a growing flower, with the stem proportional to the number of cases and the flower petals showing the deaths over time\citep{thebbcvisualanddatajournalismteamCoronavirusHowCan2020}. The visualization comes with sound as well, an attempt to make the pandemic an auditory experience as well as a visual one. The form, animation, and auditory experience are all indicative of an emotional appeal \citep{kostelnick_re-emergence_2016,dignazio_data_2020}; with the flower representation as an explicitly recognized symbol of grief; it is clearly not about showing specific case counts and deaths numerically.
+A slightly different approach by the BBC's Visual and Data Journalism team, shown in \Cref{fig:bbc-flower}, displayed the COVID cases and deaths as a growing flower, with the stem proportional to the number of cases and the flower petals showing the deaths over time\citep{thebbcvisualanddatajournalismteamCoronavirusHowCan2020}. The visualization comes with sound as well, an attempt to make the pandemic an auditory experience as well as a visual one. The form, animation, and auditory experience are all indicative of an emotional appeal \citep{kostelnick_re-emergence_2016,dignazio_data_2020}; with the flower representation as an explicitly recognized symbol of grief; it is clearly not about showing specific case counts and deaths numerically.
 
 \begin{figure}
 \centering
 \includegraphics[width=.8\linewidth]{Figures_Web/BBC_flower_time_series}
-\caption{The BBC Visual and Data Journalism Team's Covid flower, showing the cases and deaths over time \citep{thebbcvisualanddatajournalismteamCoronavirusHowCan2020}.}\label{fig:bbc-flower}
+\caption{The BBC Visual and Data Journalism Team's COVID flower, showing the cases and deaths over time \citep{thebbcvisualanddatajournalismteamCoronavirusHowCan2020}.}\label{fig:bbc-flower}
 \end{figure}
 % BBC flowers w/ sonification https://www.bbc.co.uk/news/resources/idt-7464500a-6368-4029-aa41-ab94e0ee09fb
 
@@ -420,7 +420,7 @@ A slightly different approach by the BBC's Visual and Data Journalism team, show
 \section{The ranking narrative}
 \label{sec:rankings}
 
-The plague is always the others: This is the short formula for dealing with infectious diseases from a historical perspective \citep{thiessen2021}. Closing the borders and restricting access to the country became a popular means of controlling the spread of the disease at several different points during the pandemic. Unsurprisingly, the prevailing visual narrative focused on comparisons often fueled by political rivalry, historical dependencies, recent withdrawal from supranational institutions or regional competitions. An ongoing debate about the true extent of the dangers of covid-19 and how best to combat it, combined with daily availability and public access to data across administrative levels, fostered ongoing competition and the use of leaderboards to show how bad case counts were somewhere else. 
+The plague is always the others: This is the short formula for dealing with infectious diseases from a historical perspective \citep{thiessen2021}. Closing the borders and restricting access to the country became a popular means of controlling the spread of the disease at several different points during the pandemic. Unsurprisingly, the prevailing visual narrative focused on comparisons often fueled by political rivalry, historical dependencies, recent withdrawal from supranational institutions or regional competitions. An ongoing debate about the true extent of the dangers of COVID-19 and how best to combat it, combined with daily availability and public access to data across administrative levels, fostered ongoing competition and the use of leaderboards to show how bad case counts were somewhere else. 
 
 \begin{figure}\centering
 \includegraphics[width=\linewidth]{Figures_Web/ft_deathrates_bar}\\
@@ -463,7 +463,7 @@ While log scales are not necessarily intuitive, many outlets tried to make the g
 
 \begin{figure}
 \centering
-\includegraphics[width=.8\linewidth]{ft-covid-19-deaths}
+\includegraphics[width=.8\linewidth]{ft-COVID-19-deaths}
 \caption{Reference lines to compare exponential growth rates of deaths in different countries. This provides some additional context that may help individuals use log scale data more successfully. This approach was first featured in the Financial Times, but was quickly adopted by the New York Times, 91-DIVOC, and other outlets. Graph from the Financial Times (March 23, 2020), image from \citet{kosaraPraiseDiagonalReference2020}.}
 \label{fig:diag-ref-lines}
 \end{figure}
@@ -521,13 +521,13 @@ Unfortunately, there are not a lot of good options for supporting forecasting de
 \section{Summary and Discussion} \label{sec:summary}
 Throughout the pandemic (thus far), visual representations of data have been an integral part of scientific communication. While not always optimal, these graphics have attempted to provide meaningful context, to encourage individual and collective action, and to help individuals grapple with the scale of the pandemic in cases, deaths, vaccinations, and interventions. As in any developing situation, choices made at some points in the pandemic did not always persist - many news outlets refined their charts and approach to the design of graphics over the course of the pandemic. This evolution of graphical forms has provided us with an opportunity to evaluate what worked and did not -- and why -- in a context of broad general interest. 
 
-The visual narratives of the pandemic which have persisted over time are due in part to the rise of data journalism and interactive graphics platforms which ensure that every outlet has the ability to host engaging and visually appealing graphics; however, while these graphics are nice to look at, not all are equally functional or useful for communication purposes. As in any situation, good tools can be used and misused freely; we have seen charts and graphics used to perpetuate misinformation and misleading claims, even though it is far more common for charts and graphs to be used for good - to educate and inform the public.
+The visual narratives of the pandemic which have persisted over time are due in part to the rise of data journalism and interactive graphics platforms which ensure that every outlet has the ability to host engaging and visually appealing graphics; however, while these graphics are nice to look at, not all are equally functional or useful for communication purposes. Thus, analyzing the rich collection of visualizations produced as part of the pandemic provides a unique opportunity to examine how these graphics were (and were not) effective, as well as the design decisions made during their creation. As in any situation, good tools can be used and misused freely; we have seen charts and graphics used to perpetuate misinformation and misleading claims, even though it is far more common for charts and graphs to be used for good - to educate and inform the public.
 
-The Covid 19 pandemic has amply demonstrated that policies are only effectively implemented and followed by the population if they are accepted by a large majority of the population. To achieve this goal, it is essential that scientists, governments, the media, and citizens all effectively communicate in order to justify the appropriateness, usefulness and relevance of the measures. This is as true for guidelines about the use and creation of charts as it is for policies like masks and vaccines. % Making it a bit more explicit
+The COVID 19 pandemic has amply demonstrated that policies are only effectively implemented and followed by the population if they are accepted by a large majority of the population. To achieve this goal, it is essential that scientists, governments, the media, and citizens all effectively communicate in order to justify the appropriateness, usefulness and relevance of the measures. This is as true for guidelines about the use and creation of charts as it is for policies like masks and vaccines. % Making it a bit more explicit
 
 The pandemic and graphics used to show the ebb and flow of COVID cases highlight the challenges of data visualization in the modern era: even with numerous guidelines and standards for graphics, it is not straightforward to communicate about complex data, and creating charts which fully represent the intended message or messages is a challenge. It is essential that we continue to study how graphics are perceived and interpreted, supporting the guidelines and standards which exist with user studies that ground these rules in science. 
 
-% Ubiquity of the data, persisting general interest on the topic, the rise of data journalism, and the opportunities provided by interactive and dynamic internet platforms contributed to a an ongoing trend on visual narratives of the Covid-19 pandemic. Graphical displays are used as weapons for information, but also for misinformation. Despite a growing number of guidelines for communicating statistical results transportation of the intended messages is not always straightforward and remains a challenge. The deciphering of visual icons and best practices of visual communication require furhter studies on perception and graphics.
+% Ubiquity of the data, persisting general interest on the topic, the rise of data journalism, and the opportunities provided by interactive and dynamic internet platforms contributed to a an ongoing trend on visual narratives of the COVID-19 pandemic. Graphical displays are used as weapons for information, but also for misinformation. Despite a growing number of guidelines for communicating statistical results transportation of the intended messages is not always straightforward and remains a challenge. The deciphering of visual icons and best practices of visual communication require furhter studies on perception and graphics.
 
 %Broad conclusions: 
 % importance of scientific communication
