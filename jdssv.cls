@@ -471,7 +471,6 @@
   }
 \else
   \hypersetup{%
-    hyperindex = {true},
     colorlinks = {true},
     linktocpage = {true},
     plainpages = {false},
