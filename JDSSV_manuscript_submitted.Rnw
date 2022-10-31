@@ -56,14 +56,25 @@
 %%   (in extra lines, separated by \emph{and}\\).
 %% - May contain multiple authors for the same affiliation
 %%   (in the same first line, separated by comma).
-\Address{Adalbert F.X. Wilhelm\\
-School for Business, Social and Decision Sciences\\
-Jacobs University Bremen\\
-Campus Ring 1\\
-28759 Bremen\\
-Germany\\
-e-mail:a.wilhelm@jacobs-university.de
+\Address{
+  Susan Vanderplas\\
+  Department of Statistics\\
+  University of Nebraska–Lincoln\\
+  349A Hardin Hall \\
+  Lincoln, NE 68583-0963, USA\\
+  E-mail: \email{susan.vanderplas@unl.edu}\\
+  URL: \url{https://statistics.unl.edu/susan-vanderplas}\\
+\And\\
+  Adalbert F.X. Wilhelm\\
+  School of Business, Social and Decision Sciences\\
+  Jacobs University Bremen gGmbH\\
+  Campus Ring 1\\
+  28759 Bremen, Germany\\
+  E-mail: \email{a.wilhelm@jacobs-university.de}\\
+  URL: \url{http://www.jacobs-university.de/directory/wilhelm}
 }
+
+
 
 \begin{document}
 % \SweaveOpts{concordance=TRUE}
@@ -167,7 +178,7 @@ These goals and their priorities were adapted as dynamically as the virus mutate
 
 \subsection{Data Journalism and the Media}
 
-In recent decades, many media organisations have established data teams that received unprecedented attention and wide-ranging opportunities during the pandemic to showcase their skills and abilities, not only in visualising data, but also in explaining their data collection and data analysis strategies and methods. COVID-19 allowed these data journalists to prove their utility in newsrooms, presenting data in digestible form to the public in news articles. Hence data journalism will certainly be one of the beneficiaries of the COVID-19 pandemic and has already become an important part of news publishing, with COVID-19 delivering many excellent applications, often presented in an interactive visual format on the web, such as dashboards \citep{kochWelcomeRevolutionCOVID192021}.
+In recent decades, many media organisations have established data teams that received unprecedented attention and wide-ranging opportunities during the pandemic to showcase their skills and abilities, not only in visualising data, but also in explaining their data collection and data analysis strategies and methods. COVID-19 allowed these data journalists to prove their utility in newsrooms, presenting data in digestible form to the public in news articles. Hence, data journalism will certainly be one of the beneficiaries of the COVID-19 pandemic and has already become an important part of news publishing, with COVID-19 delivering many excellent applications, often presented in an interactive visual format on the web, such as dashboards \citep{kochWelcomeRevolutionCOVID192021}.
 
 %shall we include a list of newspapers/media outlets that we aim at covering?
 
@@ -198,7 +209,7 @@ While the overall goal of a data visualisation is to tell the story of the data 
 How will the chart (and any surrounding story, in journalism) be presented to the viewer? 
 As the designer makes these choices, they have in mind an audience, and the audience's assumed characteristics affect the design choices as well: language, education level, likely medium used to access the visualisation (computer, physical newspaper, tablet, cell phone) -- all of these considerations also impact the design of the chart and what ideas the designer considers during the creative process.
 
-Once the basic form of the chart is determined, there are additional considerations that may be specified by the stylistic conventions of different news organisations, but may also be deliberately chosen for visual effect: colour palettes, fonts, spatial layouts, and annotations may be used to highlight information, convey additional points of a narrative, or provide helpful information about how to read an unfamiliar chart.
+Once the basic form of the chart is determined, there are additional considerations that may be specified by the stylistic conventions of different news organisations, but may also be deliberately chosen for visual effect; colour palettes, fonts, spatial layouts, and annotations may be used to highlight information, convey additional points of a narrative, or provide helpful information about how to read an unfamiliar chart.
 While each of these design choices could be (and have been) the subject of  additional paper(s), it is important to acknowledge that the graphics we analyse in this paper did not simply pop into being -- they are the product of a series of decisions, some consciously made and others imposed by convention or technological capabilities.
 We will highlight particular choices which were effective (or not) throughout this paper, but we will also leave some undiscussed for the sake of brevity.
 
